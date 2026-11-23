@@ -172,7 +172,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
  <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div>
  <b>実家の防犯プラン</b>
  <nav class="chips">
-  <a href="#basho">付ける場所</a><a href="#est">費用</a><a href="#onegai">お願い</a><a href="#fudan">ふだん</a>
+  <a href="#basho">付ける場所</a><a href="#tomekata">留め方</a><a href="#est">費用</a><a href="#onegai">お願い</a><a href="#fudan">ふだん</a>
  </nav>
  <button class="theme" id="theme" type="button" aria-label="ライト／ダークを切り替え" title="ライト／ダークを切り替え"></button>
 </div></div>
@@ -196,7 +196,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 
 <section class="sec" id="basho">
  <div class="sec-h"><span class="n">01</span><h2>付ける場所</h2></div>
- <p class="msg">車庫の入口の上、<b>燕のふんよけが付いている茶色い板の下</b>に付けます。ネジの穴はカメラの台座に隠れます。</p>
+ <p class="msg">車庫の入口の上、<b>燕のふんよけが付いている茶色い板の下</b>に付けます。コードは車庫の中を通るので、外からはほとんど見えません。</p>
  <div class="g2">
  <div class="card map anim rv">
    <p class="ct">正面から見た図</p><p class="cs">道路から家を見たところ。左が車庫、右が玄関</p>
@@ -240,6 +240,39 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
    </svg>
    <div class="lg"><span><i style="background:var(--s1)"></i>カメラの映る範囲</span><span><i style="background:var(--s2)"></i>コード（車庫の中）</span><span><i style="background:var(--cover)"></i>茶色いカバー</span></div>
   </div>
+ <div class="card map anim rv">
+   <p class="ct">横から見た図（コードの通り道）</p><p class="cs">左が車庫の奥、右が道路。数字は現地で測った長さ</p>
+   <svg viewBox="0 0 360 236" role="img" aria-label="横から見た断面図。車庫の奥のコンセントから2.3m上がり、天井を2.4m進み、入口の上の茶色いカバーの下にカメラ。合計約5m">
+    <rect x="0" y="206" width="360" height="30" fill="var(--road)"/>
+    <text x="330" y="226" text-anchor="middle" font-size="10.5" fill="var(--ink-3)">前の道</text>
+    <rect x="10" y="40" width="250" height="166" fill="var(--garage)" fill-opacity=".55"/>
+    <line x1="10" y1="40" x2="10" y2="206" stroke="var(--ink-2)" stroke-width="4"/>
+    <line x1="10" y1="40" x2="300" y2="40" stroke="var(--ink-2)" stroke-width="4"/>
+    <rect x="240" y="38" width="26" height="22" rx="2" fill="var(--cover)"/>
+    <rect x="26" y="130" width="54" height="76" fill="none" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
+    <text x="53" y="172" text-anchor="middle" font-size="11" fill="var(--ink-3)">物置</text>
+    <text x="130" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink-2)">車庫の中</text>
+    <path d="M296 30 Q330 26 352 44" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/>
+    <line x1="348" y1="42" x2="348" y2="206" stroke="var(--ink)" stroke-width="4"/>
+    <text x="316" y="20" text-anchor="middle" font-size="11" fill="var(--ink-3)">カーポートの枠</text>
+    <path class="beam" style="--d:.6s" d="M17 186 V47 H234 V64 H250" fill="none" stroke="var(--s2)" stroke-width="2.6" stroke-dasharray="5 4"/>
+    <path class="beam" style="--d:1.1s" d="M266 76 Q280 74 272 52" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/><rect x="266" y="46" width="5" height="7" rx="1" fill="var(--ink)"/>
+    <g class="pin" style="--d:.4s"><rect x="12" y="182" width="11" height="11" rx="2" fill="var(--s2)"/><text x="28" y="112" font-size="11" font-weight="700" fill="var(--s2)">コンセント</text><text x="28" y="126" font-size="10.5" fill="var(--ink-3)">（よしずの裏）</text></g>
+    <g class="pin" style="--d:.1s"><g transform="translate(256 73)"><rect x="-8" y="-13" width="16" height="4" rx="1" fill="#e9ecf2" stroke="#8a90a6" stroke-width=".8"/><rect x="-3" y="-9" width="6" height="4" fill="#d9dde6" stroke="#8a90a6" stroke-width=".8"/><rect x="-11" y="-5" width="20" height="16" rx="5" fill="#f6f7fa" stroke="#7d8399" stroke-width="1"/><rect x="6" y="-3" width="6" height="12" rx="2" fill="#1c2030"/><circle cx="10.5" cy="3" r="2.6" fill="#3b4256" stroke="#7d86a6" stroke-width=".7"/><circle cx="8.6" cy="-1" r=".9" fill="#ffd27a"/></g></g>
+    <g font-size="11" font-weight="700" fill="var(--s2)">
+     <text class="pin" style="--d:.7s" x="22" y="88">2.3m</text>
+     <text class="pin" style="--d:.85s" x="130" y="62" text-anchor="middle">2.4m</text>
+    </g>
+    <text class="pin" style="--d:1s" x="226" y="100" text-anchor="end" font-size="11" font-weight="700" fill="var(--cover)">茶色いカバー</text>
+    <text class="pin" style="--d:1s" x="226" y="114" text-anchor="end" font-size="10.5" fill="var(--ink-3)">（下り壁 12×12cm）</text>
+    <text class="pin" style="--d:1.2s" x="280" y="92" font-size="11" fill="var(--ink-2)">落下防止</text><text class="pin" style="--d:1.2s" x="280" y="105" font-size="11" fill="var(--ink-2)">ワイヤー</text>
+    <text class="pin" style="--d:1.2s" x="280" y="118" font-size="10" fill="var(--ink-3)">（カバー横）</text>
+    <text class="pin" style="--d:1.3s" x="130" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">合計 約5m（用意8m）</text>
+   </svg>
+   <div class="lg"><span><i style="background:var(--s2)"></i>コード</span><span><i style="background:var(--cover)"></i>茶色いカバー</span><span><i style="background:var(--ink-2)"></i>落下防止ワイヤー</span></div>
+  </div>
+ </div>
+ <div style="margin-top:14px">
  <div class="card rv">
    <p class="ct">ここにした理由</p>
    <ul class="where">
@@ -251,8 +284,57 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
  </div>
 </section>
 
+<section class="sec" id="tomekata">
+ <div class="sec-h"><span class="n">02</span><h2>落ちないように留めます</h2></div>
+ <p class="msg"><b>さびないステンレスのネジ4本</b>で留めて、念のため<b>ワイヤーでもつなぎます</b>。</p>
+ <div class="g2">
+ <div class="card map anim rv">
+   <p class="ct">留める所の断面</p><p class="cs">カバーを横から切ったところ。左が車庫側、右が道路側</p>
+   <svg viewBox="0 0 360 230" role="img" aria-label="茶色いアルミのカバーの断面。中は空洞。下の面に、ステンレスのピアスビスでカメラの台座を留める。ネジ穴のまわりはコーキング">
+    <rect x="70" y="10" width="200" height="62" fill="var(--house)" stroke="var(--line-2)"/>
+    <text x="170" y="40" text-anchor="middle" font-size="11.5" fill="var(--ink-3)">家の梁（はり）</text>
+    <path d="M60 10 V84 M300 10 V112 M60 10 H300" fill="none" stroke="var(--cover)" stroke-width="0"/>
+    <path d="M62 18 H296 V112 H62 Z" fill="none"/>
+    <path d="M58 16 H302 V114 H58 V70" fill="none" stroke="var(--cover)" stroke-width="4" stroke-linejoin="round"/>
+    <text x="180" y="94" text-anchor="middle" font-size="11" fill="var(--ink-3)">中は空洞</text>
+    <g class="pin" style="--d:.3s">
+     <path d="M207 104 L210 96 L213 104 Z M257 104 L260 96 L263 104 Z" fill="var(--ink)"/>
+    </g>
+    <rect class="beam" style="--d:.5s" x="194" y="116" width="82" height="4" fill="var(--s2)" fill-opacity=".8"/>
+    <rect x="192" y="120" width="86" height="10" rx="2" fill="var(--panel)" stroke="var(--line-2)"/>
+    <line x1="210" y1="104" x2="210" y2="128" stroke="var(--ink)" stroke-width="3"/><line x1="260" y1="104" x2="260" y2="128" stroke="var(--ink)" stroke-width="3"/>
+    <rect x="204" y="128" width="12" height="4" fill="var(--ink)"/><rect x="254" y="128" width="12" height="4" fill="var(--ink)"/>
+    <rect x="226" y="132" width="18" height="10" fill="#d9dde6" stroke="#8a90a6"/><rect x="200" y="142" width="68" height="46" rx="14" fill="#f6f7fa" stroke="#7d8399" stroke-width="1.4"/><rect x="252" y="149" width="22" height="32" rx="7" fill="#1c2030"/><circle cx="265" cy="166" r="8" fill="#3b4256" stroke="#7d86a6" stroke-width="1.2"/><circle cx="262" cy="163" r="2.6" fill="#a9bcff"/><circle cx="258" cy="154" r="2.2" fill="#ffd27a"/>
+    <path class="beam" style="--d:.9s" d="M268 186 Q296 200 304 112" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/>
+    <rect x="302" y="102" width="8" height="10" rx="1.5" fill="var(--ink)"/><circle cx="306" cy="107" r="1.6" fill="#c9ccd8"/>
+    <g font-size="10" fill="var(--ink-2)">
+     <text x="56" y="132" text-anchor="end" font-size="11" fill="var(--ink-3)">車庫側</text>
+     <text x="348" y="40" text-anchor="end" font-size="11" fill="var(--ink-3)">道路側</text>
+     <text class="pin" style="--d:.2s" x="12" y="150" fill="var(--cover)" font-weight="700" font-size="11.5">茶色いアルミのカバー</text>
+     <text class="pin" style="--d:.35s" x="12" y="167" font-size="11.5">ネジの先がドリルになって</text><text class="pin" style="--d:.35s" x="12" y="181" font-size="11.5">いて、下穴なしで入る</text>
+     <text class="pin" style="--d:.5s" x="12" y="199" fill="var(--s2)" font-weight="700" font-size="11.5">すき間うめ（雨水よけ）</text>
+     <text class="pin" style="--d:.6s" x="12" y="216" font-size="11.5">ステンレスのピアスビス 4本</text>
+     <text class="pin" style="--d:.9s" x="348" y="227" text-anchor="end" font-size="11">落下防止ワイヤー（カバーの横へ）</text>
+     <text class="pin" style="--d:.7s" x="280" y="200" font-size="11.5">カメラ</text>
+    </g>
+    <path d="M156 162 L205 104 M156 194 L194 120 M168 210 L208 130" stroke="var(--line-2)" stroke-width="1"/>
+   </svg>
+   <p class="src">ピアスビス：先がドリルになっていて、下穴なしでアルミに入り、そのままネジ山を作って留まる。</p>
+  </div>
+ <div class="card rv">
+   <p class="ct">安心のための4つ</p>
+   <ul class="where">
+    <li><span class="ic" style="background:var(--good)">1</span><div><b>ネジは4本</b>1本ゆるんでも、落ちない留め方です。</div></li>
+    <li><span class="ic" style="background:var(--good)">2</span><div><b>ワイヤーで二重に</b>カメラと板の横を、短いワイヤーでつなぎます。</div></li>
+    <li><span class="ic" style="background:var(--good)">3</span><div><b>雨水が入らない</b>ネジのまわりを、すき間うめでふさぎます。</div></li>
+    <li><span class="ic" style="background:var(--good)">4</span><div><b>付ける前に板を確かめる</b>強く押して、たわまないかを見てから付けます。</div></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
 <section class="sec" id="est">
- <div class="sec-h"><span class="n">02</span><h2>費用</h2></div>
+ <div class="sec-h"><span class="n">03</span><h2>費用</h2></div>
  <p class="msg">全部で<b>約1.3〜2.2万円</b>。<b>月々の支払いはありません。</b>取り付けは家族で行うので、工事代も0円です。</p>
  <div class="g2">
   <div class="card rv">
@@ -277,19 +359,17 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 </section>
 
 <section class="sec" id="onegai">
- <div class="sec-h"><span class="n">03</span><h2>お願いしたいこと</h2></div>
+ <div class="sec-h"><span class="n">04</span><h2>お願いしたいこと</h2></div>
  <div class="card rv">
   <ul class="where">
-   <li><span class="ic" style="background:var(--s2)">1</span><div><b>板にネジを4本留めてよいか</b>ネジの穴は、カメラの台座に隠れて見えません。</div></li>
-   <li><span class="ic" style="background:var(--s2)">2</span><div><b>通知を誰のスマホに送るか</b>あとで変えられます。</div></li>
-   <li><span class="ic" style="background:var(--s2)">3</span><div><b>Wi-Fiの名前とパスワード</b>ルーターに貼ってある紙を、当日見せてください。</div></li>
-   <li><span class="ic" style="background:var(--s2)">4</span><div><b>取り付けの日は、車を車庫から出しておく</b>半日ほどかかります。</div></li>
+   <li><span class="ic" style="background:var(--warn)">!</span><div><b>取り付けの日は、車を車庫から出しておいてください</b>半日ほどかかります。脚立を立てる場所を空けるのと、作業中に物が落ちても車に当たらないようにするためです。</div></li>
+   <li><span class="ic" style="background:var(--s2)">i</span><div><b>スマホで見られるのは、最大6人まで</b>持ち主のほかに、5人まで追加できます。</div></li>
   </ul>
  </div>
 </section>
 
 <section class="sec" id="fudan">
- <div class="sec-h"><span class="n">04</span><h2>ふだん気をつけること</h2></div>
+ <div class="sec-h"><span class="n">05</span><h2>ふだん気をつけること</h2></div>
  <div class="more">
   <div class="mo rv"><b>いるときも鍵</b>ゴミ出しの短い時間も。入られる手口はかけ忘れがいちばん多い。</div>
   <div class="mo rv"><b>知らない業者は家に入れない</b>点検・買取はインターホン越しに。その場で決めず家族に電話。</div>

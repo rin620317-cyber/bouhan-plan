@@ -12,7 +12,7 @@
 --brand:#4f5bd5;--brand-2:#8b5cf6;--brand-s:rgba(79,91,213,.09);
 --s1:#2a78d6;--s2:#eb6834;--s3:#1baf7a;--neutral:#b9bccb;--neutral-2:#d9dbe5;
 --good:#0a8a0a;--bad:#d03b3b;--warn:#b86e00;--warn-s:rgba(250,178,25,.16);--bad-s:rgba(208,59,59,.08);--good-s:rgba(12,163,12,.09);
---grid:rgba(20,24,60,.07);--house:#e9ebf3;--garage:#dfe6f5;--road:#d4d7e2;
+--grid:rgba(20,24,60,.07);--cover:#7a5a40;--house:#e9ebf3;--garage:#dfe6f5;--road:#d4d7e2;
 --shadow:0 1px 2px rgba(15,18,50,.04),0 8px 24px -12px rgba(30,34,100,.16)}
 @media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])){color-scheme:dark;
 --bg:#0b0c15;--panel:#14152a;--panel-2:#191a33;--line:rgba(160,170,255,.09);--line-2:rgba(160,170,255,.16);
@@ -20,7 +20,7 @@
 --brand:#7b88ff;--brand-2:#a78bfa;--brand-s:rgba(123,136,255,.14);
 --s1:#3987e5;--s2:#d95926;--s3:#199e70;--neutral:#4b4e6b;--neutral-2:#33354f;
 --good:#2fc72f;--bad:#ff6b6b;--warn:#fab219;--warn-s:rgba(250,178,25,.13);--bad-s:rgba(255,107,107,.12);--good-s:rgba(47,199,47,.12);
---grid:rgba(160,170,255,.08);--house:#22243f;--garage:#1c2a48;--road:#2a2c45;
+--grid:rgba(160,170,255,.08);--cover:#9a7556;--house:#22243f;--garage:#1c2a48;--road:#2a2c45;
 --shadow:0 12px 30px -16px rgba(0,0,0,.75)}}
 :root[data-theme="dark"]{color-scheme:dark;
 --bg:#0b0c15;--panel:#14152a;--panel-2:#191a33;--line:rgba(160,170,255,.09);--line-2:rgba(160,170,255,.16);
@@ -28,7 +28,7 @@
 --brand:#7b88ff;--brand-2:#a78bfa;--brand-s:rgba(123,136,255,.14);
 --s1:#3987e5;--s2:#d95926;--s3:#199e70;--neutral:#4b4e6b;--neutral-2:#33354f;
 --good:#2fc72f;--bad:#ff6b6b;--warn:#fab219;--warn-s:rgba(250,178,25,.13);--bad-s:rgba(255,107,107,.12);--good-s:rgba(47,199,47,.12);
---grid:rgba(160,170,255,.08);--house:#22243f;--garage:#1c2a48;--road:#2a2c45;
+--grid:rgba(160,170,255,.08);--cover:#9a7556;--house:#22243f;--garage:#1c2a48;--road:#2a2c45;
 --shadow:0 12px 30px -16px rgba(0,0,0,.75)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:64px}
@@ -157,6 +157,11 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
  h1{font-size:22px}.card{padding:14px;border-radius:14px}.top b{display:none}
  .sec{margin-top:28px}.sec-h h2{font-size:17px}.k-val{font-size:19px}.kpis{gap:10px}
  .rng{grid-template-columns:74px 1fr}.axis{margin-left:84px}.more{grid-template-columns:1fr}.chips a{padding:4px 9px}}
+.cmp{width:100%;border-collapse:collapse;font-size:12.5px}
+.cmp th,.cmp td{padding:7px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.cmp thead th{font-size:12px;color:var(--ink-2)}
+.cmp tbody th{color:var(--ink-3);font-weight:600;white-space:nowrap}
+.cmp td.g{color:var(--good);font-weight:600}.cmp td.w{color:var(--warn)}
 </style>
 </head>
 <body>
@@ -170,214 +175,245 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 </div></div>
 
 <div class="wrap">
-<div class="note">値段は2026年11月に調べた目安（税込）です。時期・お店で変わります。買う前に最新の値段と、付属品の中身を確かめてください。</div>
+<div class="note">値段は2026年11月に調べた目安（税込）です。ご両親向けの費用と仕様は<a href="mitsumori.html" target="_blank" rel="noopener" style="color:inherit;font-weight:700">見積り・仕様書</a>にまとめています。注文・購入はしていません。</div>
 
 <div class="hero">
  <div class="card rv" style="display:flex;flex-direction:column;justify-content:space-between">
   <div>
    <div class="eyebrow">決まった案 · 玄関前に1台</div>
-   <h1>ガレージと玄関の間の軒天に、Tapo C530WS を1台。穴はあけず、板を接着して付ける</h1>
-   <p class="lede">電源はガレージ奥のコンセントから、天井づたいに約5m。首振りできるので、<b>道路・玄関・自転車・ガレージの入口</b>を1台で見られます。カメラは約8,000〜1.1万円。</p>
+   <h1>車庫の入口の上の茶色いアルミカバーに、Tapo C530WS を1台。リベットナットとボルトで留める</h1>
+   <p class="lede">電源は車庫の奥のコンセントから、天井づたいに約5m。首振りできるので、<b>道路・玄関・自転車・車庫の入口</b>を1台で見られます。費用は全部で約1.7〜2.8万円です。</p>
   </div>
-  <div><span class="pill">穴あけなし</span><span class="pill">Wi-Fiが届く</span><span class="pill">雨が当たらない</span><span class="pill w">電源は9V</span></div>
+  <div><span class="pill">年月で落ちにくい</span><span class="pill">Wi-Fiが届く</span><span class="pill">雨が当たりにくい</span><span class="pill w">電源は9V</span></div>
  </div>
  <div class="card takeaways rv">
   <h3>要点</h3>
-  <div class="tk"><i>1</i><p><b>場所はここが一番。</b>カーポートの前はWi-Fiが届かない。ここなら電波が届き、雨も当たらず、路地からカメラが見える。</p></div>
-  <div class="tk"><i>2</i><p><b>電源は12Vではなく9V。</b>延長ケーブルはプラグの太さと9Vで使えるかを確認。線が細いと夜や首振りで再起動することがあるので、<b>付ける前に地面で全部つないで試す</b>。</p></div>
-  <div class="tk"><i>3</i><p><b>接着は「塗装の確認・全面に接着剤・1〜2日待つ・落下防止ワイヤー」。</b>凸凹の塗装に両面テープはほぼ効かない。</p></div>
+  <div class="tk"><i>1</i><p><b>場所は車の上のアルミの板。</b>家を買ったときから<b>燕のふんよけ</b>がネジで付いている板。平らで、Wi-Fiが届き、雨が当たりにくい。</p></div>
+  <div class="tk"><i>2</i><p><b>留め方はリベットナット。</b>薄いアルミに後からネジ穴を作る部品で、裏でつぶれて抜けない。<b>3〜4か所</b>で留めるので、1か所ゆるんでも落ちない。接着より年月に強い。</p></div>
+  <div class="tk"><i>3</i><p><b>買う前に必ず確かめる。</b>カバーを強く押してたわまないか。板の厚みと、下の面の幅も測る。台座の穴はカメラが届いてから。</p></div>
  </div>
 </div>
 
 <div class="kpis">
  <div class="card kpi rv"><div class="k-lbl">カメラ</div><div class="k-val">C530WS</div><div class="k-sub">3K・首振り・Wi-Fi・屋外用</div></div>
- <div class="card kpi rv"><div class="k-lbl">カメラの値段</div><div class="k-val num">0.8〜1.1<small>万円</small></div><div class="k-sub">セールで変わる</div></div>
+ <div class="card kpi rv"><div class="k-lbl">費用の合計</div><div class="k-val num">1.7〜2.8<small>万円</small></div><div class="k-sub">道具代を含む・月額0円</div></div>
  <div class="card kpi rv"><div class="k-lbl">配線の長さ</div><div class="k-val num">約5<small>m</small></div><div class="k-sub">付属3m＋延長5m＝8mを用意</div></div>
- <div class="card kpi rv"><div class="k-lbl">壁の穴</div><div class="k-val">なし</div><div class="k-sub">板を接着＋ワイヤー</div></div>
+ <div class="card kpi rv"><div class="k-lbl">留める所</div><div class="k-val num">3〜4<small>か所</small></div><div class="k-sub">直径6〜7mmの穴・台座で隠れる</div></div>
 </div>
 
 <!-- 1 決まったこと -->
 <section class="sec" id="s1">
  <div class="sec-h"><span class="n">01</span><h2>決まったこと</h2></div>
- <p class="msg">現地で測って決めた内容です。<b>赤字の3つ</b>は、Slackで出た案から直したところ。</p>
+ <p class="msg">11月23日に現地で見て決めた内容です。<b>接着はやめて、リベットナットで留めます。</b></p>
  <div class="g2">
   <div class="card rv">
    <p class="ct">機材と付け方</p>
    <dl class="spec" style="margin-top:8px">
     <dt>カメラ</dt><dd>TP-Link Tapo C530WS（3K・首振り・屋外用・Wi-Fi）</dd>
-    <dt>録画</dt><dd>高耐久のmicroSDカード 64〜128GB（例：SanDisk High Endurance）。月額なしで使える</dd>
-    <dt>電源</dt><dd>付属のアダプター（<b>9V・0.85A</b>）＋DC延長ケーブル 5m。ガレージ奥のコンセント（物置と外壁のすき間、よしずの裏）から</dd>
-    <dt>つなぎ方</dt><dd>Wi-Fi（カーポートの前は届かないので、家側の軒下に付ける）</dd>
-    <dt>場所</dt><dd>ガレージの黒い枠のすぐ手前、玄関灯の左の<b>軒天（ベージュの天井）</b>。逆さに吊る</dd>
-    <dt>固定</dt><dd>壁・軒天に<b>ビスもバンドも使わない</b>。塩ビ板にカメラをボルトで留め、板を軒天に接着。カーポートの枠へ落下防止ワイヤー</dd>
-    <dt>工具</dt><dd>木工用の電動ドリル（手持ち）</dd>
+    <dt>録画</dt><dd>高耐久マイクロSDカード 128GB（例：SanDisk High Endurance）。月額なし</dd>
+    <dt>電源</dt><dd>付属のアダプター（<b>9V・0.85A</b>）＋DC延長ケーブル 5m。車庫の奥のコンセント（物置と外壁のすき間、よしずの裏）から</dd>
+    <dt>つなぎ方</dt><dd>Wi-Fi（カーポートの前は届かないので、家側に付ける）</dd>
+    <dt>場所</dt><dd>車庫の入口の上（車の上）、<b>燕のふんよけが付いている茶色いアルミの板の下の面</b>。道路側の端の玄関寄り。逆さに吊る</dd>
+    <dt>固定</dt><dd>カバーに<b>アルミのリベットナット（M4かM5）を3〜4か所</b>。<b>ステンレスのボルト</b>で台座を留める。穴のまわりはコーキング</dd>
+    <dt>落下防止</dt><dd>念のため、カメラ本体からカーポートの枠へワイヤー</dd>
+    <dt>工具</dt><dd>手持ちの電動ドライバー＋<b>金属用のドリル刃</b>＋<b>ナットリベッター</b>（買う）</dd>
    </dl>
   </div>
   <div class="card rv">
-   <p class="ct">Slackの案から直したところ</p><p class="cs">どれも安全と、ちゃんと動くためのもの</p>
+   <p class="ct">現地でわかったこと（11月23日）</p><p class="cs">留め方をリベットナットに決めた理由</p>
    <ul class="where">
-    <li><span class="ic" style="background:var(--bad)">1</span><div><b>電源は12Vではなく9V</b>公式の仕様では9V・0.85A。延長ケーブルは<b>プラグの太さ（外径5.5mm／内径2.1mmか）</b>と<b>9Vで使えるか</b>を、付属のアダプターと見くらべてから買う。線は太めを。</div></li>
-    <li><span class="ic" style="background:var(--bad)">2</span><div><b>テープは仮止め、強さは接着剤で</b>凸凹の吹付塗装に両面テープはほぼ付かない。接着剤を<b>板の裏の全面</b>に塗り、テープは細い帯で仮止めだけ。テープを全面に貼ると接着剤が届かない。</div></li>
-    <li><span class="ic" style="background:var(--bad)">3</span><div><b>板を先に貼り、1〜2日たってからカメラ</b>固まる前に重さをかけるとはがれやすい。ワイヤーは板ではなく<b>カメラ本体</b>から、カーポートの枠へ少したるませて。</div></li>
+    <li><span class="ic" style="background:var(--good)">✓</span><div><b>カバーは平らなアルミで、中は空洞</b>たたくとアルミの音だけ。端は閉じている。<b>裏からナットを当てられない</b>ので、表から付けられるリベットナットにする。</div></li>
+    <li><span class="ic" style="background:var(--good)">✓</span><div><b>燕のふんよけ（家を買ったときから）は、ネジでアルミに直接</b>抜いたネジは先が平らな機械ネジで、裏にナットはなかった。<b>同じ考え方で留められる</b>証拠。</div></li>
+    <li><span class="ic" style="background:var(--good)">✓</span><div><b>巻き付けはできない</b>カバーのまわりにすき間がない。</div></li>
+    <li><span class="ic" style="background:var(--bad)">×</span><div><b>接着はやめた</b>凸凹の吹付塗装に貼る方法は、年月がたつと塗装ごとはがれる心配がある。落ちる先は玄関の前。</div></li>
    </ul>
   </div>
+ </div>
+ <div class="card rv" style="margin-top:14px">
+  <p class="ct">別案：ピアスビスで留める場合</p><p class="cs">先がドリルになったネジ。知人のおすすめ。下穴なしで、電動ドライバーだけで留められる</p>
+  <div style="overflow-x:auto"><table class="cmp">
+   <thead><tr><th></th><th>リベットナット（本命）</th><th>ピアスビス</th></tr></thead>
+   <tbody>
+    <tr><th>下穴</th><td>要る</td><td class="g">要らない</td></tr>
+    <tr><th>工具</th><td>ナットリベッター（約3,000円）</td><td class="g">手持ちのドライバー</td></tr>
+    <tr><th>手間</th><td>多い</td><td class="g">少ない</td></tr>
+    <tr><th>年月の強さ</th><td class="g">強い。裏でつぶれて抜けない</td><td class="w">薄い板（1〜2mm）はネジ山が1〜2山しかかからず、吊り下げの向きで少しずつゆるみやすい</td></tr>
+    <tr><th>失敗しやすい所</th><td>下穴の太さを守れば少ない</td><td class="w">締めすぎると空回りして効かなくなる</td></tr>
+    <tr><th>付け外し</th><td class="g">何度でもできる</td><td class="w">くり返すと穴が広がる</td></tr>
+   </tbody>
+  </table></div>
+  <p class="src">ピアスビスを使うなら：<b>ステンレス製</b>を4本、電動ドライバーは<b>弱い設定で、最後は手で締める</b>。ネジ穴にコーキング、<b>落下防止ワイヤーは必ず</b>。板の厚みを測ってから決めてもよい。</p>
  </div>
 </section>
 
 <!-- 2 場所と配線 -->
 <section class="sec" id="s2">
  <div class="sec-h"><span class="n">02</span><h2>付ける場所と、コードの通り道</h2></div>
- <p class="msg">カメラは<b>玄関灯から少し離して</b>付けます。近いと夜に灯りがまぶしく映ります。コードは<b>ガレージの中を通す</b>ので、外からはほとんど見えません。</p>
+ <p class="msg">カメラは<b>玄関灯から少し離れた</b>カバーの右端に付けます。コードは<b>車庫の中を通す</b>ので、外からはほとんど見えません。</p>
  <div class="g2">
   <div class="card map anim rv">
-   <p class="ct">正面から見た図</p><p class="cs">道路から家を見たところ。上の黒い帯がカーポートの枠</p>
-   <svg viewBox="0 0 360 236" role="img" aria-label="家の正面図。ガレージと玄関ドアの間の軒天にカメラ。コードはガレージ奥のコンセントから天井を通ってカメラへ">
+   <p class="ct">正面から見た図</p><p class="cs">道路から家を見たところ。左が車庫、右が玄関</p>
+   <svg viewBox="0 0 360 236" role="img" aria-label="家の正面図。車庫の入口の上にある茶色いカバーの右端の下にカメラ。コードは車庫の奥のコンセントから天井を通ってカメラへ">
     <rect x="0" y="206" width="360" height="30" fill="var(--road)"/>
-    <text x="180" y="226" text-anchor="middle" font-size="11" fill="var(--ink-3)">路地</text>
+    <text x="180" y="226" text-anchor="middle" font-size="11" fill="var(--ink-3)">前の道</text>
     <rect x="18" y="44" width="324" height="162" fill="var(--house)" stroke="var(--line-2)"/>
-    <rect x="30" y="74" width="138" height="132" fill="var(--garage)"/>
-    <rect x="30" y="70" width="138" height="7" fill="var(--ink-2)"/>
+    <rect x="30" y="80" width="138" height="126" fill="var(--garage)"/>
+    <rect x="26" y="68" width="146" height="12" rx="1.5" fill="var(--cover)"/>
     <rect x="80" y="140" width="66" height="66" fill="none" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
     <text x="113" y="176" text-anchor="middle" font-size="10" fill="var(--ink-3)">物置（奥）</text>
-    <text x="99" y="104" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink-2)">ガレージ</text>
+    <text x="99" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink-2)">車庫</text>
     <rect x="226" y="86" width="62" height="120" fill="var(--panel)" stroke="var(--line-2)"/>
     <text x="257" y="150" text-anchor="middle" font-size="11" fill="var(--ink-3)">玄関</text>
-    <circle cx="250" cy="56" r="5" fill="var(--warn)" fill-opacity=".7"/>
-    <text x="262" y="60" font-size="10" fill="var(--ink-3)">玄関灯</text>
+    <circle cx="298" cy="82" r="5" fill="var(--warn)" fill-opacity=".7"/>
+    <text x="306" y="86" font-size="10" fill="var(--ink-3)">玄関灯</text>
     <rect x="294" y="168" width="42" height="38" fill="none" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
     <text x="315" y="191" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">自転車</text>
     <path d="M10 40 H350" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/>
     <line x1="14" y1="40" x2="14" y2="206" stroke="var(--ink)" stroke-width="4"/>
     <line x1="346" y1="40" x2="346" y2="206" stroke="var(--ink)" stroke-width="4"/>
-    <path class="beam" style="--d:.7s" d="M190 60 L36 206 L340 206 Z" fill="var(--s1)" fill-opacity=".12"/>
-    <path class="beam" style="--d:.9s" d="M44 196 V80 H178 L190 56" fill="none" stroke="var(--s2)" stroke-width="2.4" stroke-dasharray="5 4"/>
+    <text x="350" y="32" text-anchor="end" font-size="9.5" fill="var(--ink-3)">カーポートの枠</text>
+    <path class="beam" style="--d:.7s" d="M156 92 L30 206 L340 206 Z" fill="var(--s1)" fill-opacity=".12"/>
+    <path class="beam" style="--d:.9s" d="M44 196 V86 H144" fill="none" stroke="var(--s2)" stroke-width="2.4" stroke-dasharray="5 4"/>
     <g class="pin" style="--d:.5s"><rect x="38" y="190" width="12" height="12" rx="2" fill="var(--s2)"/><text x="54" y="200" font-size="9.5" font-weight="700" fill="var(--s2)">コンセント（奥）</text></g>
-    <g class="pin" style="--d:.1s"><rect x="183" y="44" width="14" height="6" fill="var(--ink-2)"/><circle cx="190" cy="58" r="10" fill="var(--s1)"/><circle cx="190" cy="60" r="3.5" fill="#fff"/></g>
-    <g class="pin" style="--d:.3s"><text x="196" y="30" text-anchor="middle" font-size="11" font-weight="700" fill="var(--s1)">ここに付ける（軒天）</text></g>
+    <g class="pin" style="--d:.1s"><rect x="148" y="80" width="16" height="5" fill="var(--ink-2)"/><circle cx="156" cy="93" r="9" fill="var(--s1)"/><circle cx="156" cy="95" r="3.2" fill="#fff"/></g>
+    <g class="pin" style="--d:.3s"><path d="M170 74 L196 58" stroke="var(--s1)" stroke-width="1.4"/><text x="198" y="58" font-size="10.5" font-weight="700" fill="var(--s1)">ここ</text><text x="198" y="71" font-size="9.5" fill="var(--ink-2)">（茶色いカバーの下）</text></g>
    </svg>
-   <div class="lg"><span><i style="background:var(--s1)"></i>カメラ（映る範囲）</span><span><i style="background:var(--s2)"></i>コード（ガレージの中を通る）</span></div>
+   <div class="lg"><span><i style="background:var(--s1)"></i>カメラと映る範囲</span><span><i style="background:var(--s2)"></i>コード（車庫の中）</span><span><i style="background:var(--cover)"></i>茶色いカバー</span></div>
   </div>
   <div class="card map anim rv">
-   <p class="ct">横から見た図（コードの通り道）</p><p class="cs">左がガレージの奥、右が道路。数字は現地で測った長さ</p>
-   <svg viewBox="0 0 360 236" role="img" aria-label="横から見た断面図。ガレージ奥のコンセントから2.3m上がり、天井を2.4m進み、開口部の下り壁をよけて軒天のカメラへ。合計約5m">
+   <p class="ct">横から見た図（コードの通り道）</p><p class="cs">左が車庫の奥、右が道路。数字は現地で測った長さ</p>
+   <svg viewBox="0 0 360 236" role="img" aria-label="横から見た断面図。車庫の奥のコンセントから2.3m上がり、天井を2.4m進み、入口の上の茶色いカバーの下にカメラ。合計約5m">
     <rect x="0" y="206" width="360" height="30" fill="var(--road)"/>
-    <text x="330" y="226" text-anchor="middle" font-size="10.5" fill="var(--ink-3)">路地</text>
+    <text x="330" y="226" text-anchor="middle" font-size="10.5" fill="var(--ink-3)">前の道</text>
     <rect x="10" y="40" width="250" height="166" fill="var(--garage)" fill-opacity=".55"/>
     <line x1="10" y1="40" x2="10" y2="206" stroke="var(--ink-2)" stroke-width="4"/>
     <line x1="10" y1="40" x2="300" y2="40" stroke="var(--ink-2)" stroke-width="4"/>
-    <rect x="246" y="40" width="14" height="14" fill="var(--ink-2)"/>
+    <rect x="240" y="38" width="26" height="22" rx="2" fill="var(--cover)"/>
     <rect x="26" y="130" width="54" height="76" fill="none" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
     <text x="53" y="172" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">物置</text>
-    <text x="130" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink-2)">ガレージの中</text>
+    <text x="130" y="140" text-anchor="middle" font-size="12" font-weight="700" fill="var(--ink-2)">車庫の中</text>
     <path d="M296 30 Q330 26 352 44" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round"/>
     <line x1="348" y1="42" x2="348" y2="206" stroke="var(--ink)" stroke-width="4"/>
     <text x="316" y="20" text-anchor="middle" font-size="10" fill="var(--ink-3)">カーポートの枠</text>
-    <path class="beam" style="--d:.6s" d="M17 186 V47 H242 V60 H264 V47 H284" fill="none" stroke="var(--s2)" stroke-width="2.6" stroke-dasharray="5 4"/>
-    <path class="beam" style="--d:1.1s" d="M292 62 Q322 74 346 50" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/>
+    <path class="beam" style="--d:.6s" d="M17 186 V47 H234 V64 H250" fill="none" stroke="var(--s2)" stroke-width="2.6" stroke-dasharray="5 4"/>
+    <path class="beam" style="--d:1.1s" d="M266 74 Q310 92 346 52" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/>
     <g class="pin" style="--d:.4s"><rect x="12" y="182" width="11" height="11" rx="2" fill="var(--s2)"/><text x="28" y="112" font-size="9.5" font-weight="700" fill="var(--s2)">コンセント</text><text x="28" y="123" font-size="9" fill="var(--ink-3)">（よしずの裏）</text></g>
-    <g class="pin" style="--d:.1s"><rect x="278" y="40" width="16" height="5" fill="var(--ink-2)"/><circle cx="286" cy="56" r="10" fill="var(--s1)"/><circle cx="286" cy="60" r="3.5" fill="#fff"/></g>
+    <g class="pin" style="--d:.1s"><rect x="248" y="60" width="16" height="4" fill="var(--ink-2)"/><circle cx="256" cy="73" r="9" fill="var(--s1)"/><circle cx="256" cy="75" r="3.2" fill="#fff"/></g>
     <g font-size="11" font-weight="700" fill="var(--s2)">
      <text class="pin" style="--d:.7s" x="22" y="88">2.3m</text>
      <text class="pin" style="--d:.85s" x="130" y="62" text-anchor="middle">2.4m</text>
-     <text class="pin" style="--d:1s" x="253" y="78" text-anchor="middle" font-size="9.5">下り壁 12×12cm</text>
     </g>
-    <text class="pin" style="--d:1.2s" x="300" y="96" font-size="9.5" fill="var(--ink-2)">落下防止</text>
-    <text class="pin" style="--d:1.2s" x="300" y="108" font-size="9.5" fill="var(--ink-2)">ワイヤー</text>
+    <text class="pin" style="--d:1s" x="226" y="100" text-anchor="end" font-size="9.5" font-weight="700" fill="var(--cover)">茶色いカバー</text>
+    <text class="pin" style="--d:1s" x="226" y="112" text-anchor="end" font-size="9" fill="var(--ink-3)">（下り壁 12×12cm）</text>
+    <text class="pin" style="--d:1.2s" x="300" y="110" font-size="9.5" fill="var(--ink-2)">落下防止</text>
+    <text class="pin" style="--d:1.2s" x="300" y="122" font-size="9.5" fill="var(--ink-2)">ワイヤー</text>
     <text class="pin" style="--d:1.3s" x="130" y="190" text-anchor="middle" font-size="11" font-weight="700" fill="var(--ink)">合計 約5m（用意8m）</text>
    </svg>
-   <div class="lg"><span><i style="background:var(--s2)"></i>コード</span><span><i style="background:var(--ink-2)"></i>落下防止ワイヤー</span></div>
+   <div class="lg"><span><i style="background:var(--s2)"></i>コード</span><span><i style="background:var(--cover)"></i>茶色いカバー</span><span><i style="background:var(--ink-2)"></i>落下防止ワイヤー</span></div>
   </div>
  </div>
  <div class="card rv" style="margin-top:14px">
   <p class="ct">現地で測った長さ</p>
   <ul class="items">
-   <li><span>ガレージ奥のコンセント → 天井（高さ）</span><span class="num">2,300mm</span></li>
-   <li><span>コンセント → 天井の曲がり角（開口部）まで（横）</span><span class="num">2,400mm</span></li>
-   <li><span>開口部の下り壁（黒い金属の枠を含む）</span><span class="num">高さ120mm × 幅120mm</span></li>
+   <li><span>車庫の奥のコンセント → 天井（高さ）</span><span class="num">2,300mm</span></li>
+   <li><span>コンセント → 天井の曲がり角（入口）まで（横）</span><span class="num">2,400mm</span></li>
+   <li><span>入口の下り壁（茶色いカバーを含む）</span><span class="num">高さ120mm × 幅120mm</span></li>
    <li><span><b>カメラまでの合計</b></span><span class="num"><b>約5,000mm</b></span></li>
    <li><span>用意するコード（付属約3m＋延長5m）</span><span class="num">8m（余りは物置の裏で束ねる）</span></li>
+   <li><span>地面からカバーの下の面まで</span><span class="num" style="color:var(--warn)">要確認（2.3m以上）</span></li>
+   <li><span>カバーの下の面の幅</span><span class="num" style="color:var(--warn)">要確認（台座約12cm）</span></li>
   </ul>
-  <p class="src">余ったコードは丸めすぎない（8の字に軽く束ねる）。アダプターとつなぎ目は、雨のかからないガレージの奥に置く。</p>
+  <p class="src">余ったコードは丸めすぎない（8の字に軽く束ねる）。アダプターとつなぎ目は、雨のかからない車庫の奥に置く。</p>
  </div>
 </section>
 
 <!-- 3 付け方 -->
 <section class="sec" id="s3">
- <div class="sec-h"><span class="n">03</span><h2>穴をあけずに付ける手順</h2></div>
- <p class="msg">強さを決めるのは<b>「塗装がしっかりしているか」</b>と<b>「接着剤が全面に付いているか」</b>。そして万一のための<b>ワイヤー</b>。落ちる先は玄関の前、ご両親の頭の上です。</p>
+ <div class="sec-h"><span class="n">03</span><h2>リベットナットで留める手順</h2></div>
+ <p class="msg">強さを決めるのは<b>「カバーがしっかりしているか」</b>と<b>「留める所の数（3〜4か所）」</b>。そして万一のための<b>ワイヤー</b>です。</p>
  <div class="g2">
   <div class="card map anim rv">
-   <p class="ct">取り付け部分の断面</p><p class="cs">軒天を真横から見たところ</p>
-   <svg viewBox="0 0 360 200" role="img" aria-label="取り付けの断面。軒天の下に接着剤、塩ビ板、皿ボルトでカメラの台座。カメラ本体からカーポートの枠へワイヤー">
-    <rect x="10" y="14" width="340" height="30" fill="var(--house)" stroke="var(--line-2)"/>
-    <path d="M10 44 q6 4 12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0 t12 0" fill="none" stroke="var(--ink-3)" stroke-width="1.2"/>
-    <text x="20" y="33" font-size="10.5" fill="var(--ink-2)">軒天（凸凹の吹付塗装）</text>
-    <rect class="beam" style="--d:.3s" x="104" y="45" width="152" height="6" fill="var(--s2)" fill-opacity=".75"/>
-    <rect x="108" y="45" width="8" height="6" fill="var(--ink-2)"/><rect x="244" y="45" width="8" height="6" fill="var(--ink-2)"/>
-    <rect x="104" y="51" width="152" height="9" rx="1.5" fill="var(--neutral)"/>
-    <path d="M146 51 h12 l-3 5 h-6 z M202 51 h12 l-3 5 h-6 z" fill="var(--ink-2)"/>
-    <line x1="152" y1="56" x2="152" y2="74" stroke="var(--ink-2)" stroke-width="3"/><line x1="208" y1="56" x2="208" y2="74" stroke="var(--ink-2)" stroke-width="3"/>
-    <rect x="136" y="60" width="88" height="10" rx="2" fill="var(--panel)" stroke="var(--line-2)"/>
-    <rect x="146" y="70" width="12" height="5" fill="var(--ink-2)"/><rect x="202" y="70" width="12" height="5" fill="var(--ink-2)"/>
-    <path d="M150 76 h60 v14 a30 30 0 0 1 -60 0 z" fill="var(--panel)" stroke="var(--line-2)"/>
-    <circle cx="180" cy="104" r="20" fill="var(--panel-2)" stroke="var(--line-2)"/>
-    <circle cx="180" cy="110" r="7" fill="var(--s1)"/>
-    <path class="beam" style="--d:.8s" d="M206 96 Q280 150 334 110" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/>
-    <rect x="326" y="96" width="16" height="16" fill="var(--ink)"/>
-    <g font-size="10" fill="var(--ink-2)">
-     <text class="pin" style="--d:.3s" x="262" y="56" fill="var(--s2)" font-weight="700">接着剤を全面に</text>
-     <text class="pin" style="--d:.4s" x="262" y="70">塩ビ板 3〜5mm</text>
-     <text class="pin" style="--d:.5s" x="18" y="66">仮止めテープ</text><text class="pin" style="--d:.5s" x="18" y="78">（両はしに細く）</text>
-     <text class="pin" style="--d:.6s" x="18" y="104">皿ボルト（頭は</text><text class="pin" style="--d:.6s" x="18" y="116">板に沈める）</text>
-     <text class="pin" style="--d:.7s" x="140" y="146">カメラ本体</text>
-     <text class="pin" style="--d:.9s" x="348" y="168" text-anchor="end">ワイヤー（ゆるめに）</text>
-     <text class="pin" style="--d:.9s" x="348" y="90" text-anchor="end">カーポートの枠</text>
+   <p class="ct">留める所の断面</p><p class="cs">カバーを横から切ったところ。左が車庫側、右が道路側</p>
+   <svg viewBox="0 0 360 230" role="img" aria-label="茶色いアルミのカバーの断面。中は空洞。下の面にリベットナットを付け、ステンレスのボルトでカメラの台座を留める。穴のまわりはコーキング">
+    <rect x="70" y="10" width="200" height="62" fill="var(--house)" stroke="var(--line-2)"/>
+    <text x="170" y="40" text-anchor="middle" font-size="10.5" fill="var(--ink-3)">家の梁（はり）</text>
+    <path d="M60 10 V84 M300 10 V112 M60 10 H300" fill="none" stroke="var(--cover)" stroke-width="0"/>
+    <path d="M62 18 H296 V112 H62 Z" fill="none"/>
+    <path d="M58 16 H302 V114 H58 V70" fill="none" stroke="var(--cover)" stroke-width="4" stroke-linejoin="round"/>
+    <text x="180" y="94" text-anchor="middle" font-size="10" fill="var(--ink-3)">中は空洞</text>
+    <g class="pin" style="--d:.3s">
+     <rect x="205" y="98" width="10" height="12" rx="2" fill="var(--ink-2)"/><rect x="255" y="98" width="10" height="12" rx="2" fill="var(--ink-2)"/>
+     <rect x="203" y="96" width="14" height="4" rx="1" fill="var(--ink-2)"/><rect x="253" y="96" width="14" height="4" rx="1" fill="var(--ink-2)"/>
     </g>
+    <rect class="beam" style="--d:.5s" x="194" y="116" width="82" height="4" fill="var(--s2)" fill-opacity=".8"/>
+    <rect x="192" y="120" width="86" height="10" rx="2" fill="var(--panel)" stroke="var(--line-2)"/>
+    <line x1="210" y1="104" x2="210" y2="128" stroke="var(--ink)" stroke-width="3"/><line x1="260" y1="104" x2="260" y2="128" stroke="var(--ink)" stroke-width="3"/>
+    <rect x="204" y="128" width="12" height="4" fill="var(--ink)"/><rect x="254" y="128" width="12" height="4" fill="var(--ink)"/>
+    <path d="M205 132 h60 v14 a30 30 0 0 1 -60 0 z" fill="var(--panel)" stroke="var(--line-2)"/>
+    <circle cx="235" cy="160" r="20" fill="var(--panel-2)" stroke="var(--line-2)"/>
+    <circle cx="235" cy="166" r="7" fill="var(--s1)"/>
+    <path class="beam" style="--d:.9s" d="M258 158 Q310 196 340 150" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/>
+    <rect x="334" y="136" width="14" height="14" fill="var(--ink)"/>
+    <g font-size="10" fill="var(--ink-2)">
+     <text x="56" y="132" text-anchor="end" font-size="9.5" fill="var(--ink-3)">車庫側</text>
+     <text x="340" y="104" text-anchor="end" font-size="9.5" fill="var(--ink-3)">道路側</text>
+     <text class="pin" style="--d:.2s" x="12" y="150" fill="var(--cover)" font-weight="700">茶色いアルミのカバー</text>
+     <text class="pin" style="--d:.35s" x="12" y="168">ナット（中でつぶれて</text><text class="pin" style="--d:.35s" x="12" y="180">抜けなくなる）</text>
+     <text class="pin" style="--d:.5s" x="12" y="198" fill="var(--s2)" font-weight="700">すき間うめ（雨水よけ）</text>
+     <text class="pin" style="--d:.6s" x="12" y="216">ステンレスのボルト 3〜4本</text>
+     <text class="pin" style="--d:.9s" x="348" y="222" text-anchor="end">落下防止ワイヤー</text>
+     <text class="pin" style="--d:.7s" x="282" y="184">カメラ</text>
+    </g>
+    <path d="M128 164 L205 104 M128 196 L194 120 M150 212 L208 130" stroke="var(--line-2)" stroke-width="1"/>
    </svg>
+   <p class="src">リベットナット：穴に差して工具で握ると、カバーの裏側でつぶれて広がり、抜けなくなる。そこにボルト用のネジ山ができる。</p>
   </div>
   <div class="card rv">
-   <p class="ct">手順</p><p class="cs">脚立の作業は2人で。雨の日と、雨のすぐ後はやらない</p>
+   <p class="ct">手順</p><p class="cs">脚立の作業は2人で。保護メガネを付ける。雨の日はやらない</p>
    <div class="agenda">
-    <div class="ag"><div><b>仮に持って、映りとWi-Fiを見る</b><span>カメラを手で当てて、アプリで<b>昼と夜</b>の映り、Wi-Fiの強さを確認。玄関灯が画面に入らない位置に。</span></div></div>
-    <div class="ag"><div><b>塗装を確かめる</b><span>指でこすって<b>白い粉が付く</b>、爪で引っかいて<b>はがれる</b>所は×。少しずらして、しっかりした所を探す。</span></div></div>
-    <div class="ag"><div><b>掃除して乾かす</b><span>ほこり・クモの巣・カビを、固く絞った布でふく。<b>完全に乾かしてから</b>貼る。</span></div></div>
-    <div class="ag"><div><b>板を作る</b><span>塩ビ板（10cm角以上、できれば15cm角）にカメラの台座の穴位置で穴をあけ、<b>M4のステンレス皿ボルト</b>を裏から通す。頭は板に沈めて<b>裏を平らに</b>。ボルトは下向きに出しておく。</span></div></div>
-    <div class="ag"><div><b>板を接着する</b><span>板の裏の両はしに細く両面テープ、残り全面に<b>弾性接着剤（セメダイン スーパーXなど）</b>をくし目に塗る。軒天に押し当て、テープで仮止め。</span></div></div>
-    <div class="ag"><div><b>1〜2日待つ</b><span>寒い日は長めに。この間はカメラを付けない。</span></div></div>
-    <div class="ag"><div><b>カメラを付けて、ワイヤーを張る</b><span>出しておいたボルトに台座を通してナットで留める。<b>カメラ本体</b>からカーポートの黒い枠へ、ステンレスワイヤー（または耐候性の結束バンド）を少したるませて結ぶ。</span></div></div>
-    <div class="ag"><div><b>コードを留めて、水を防ぐ</b><span>天井と壁は<b>ナイロンクリップ（アイボリー）＋弾性接着剤</b>を30〜40cmおきに。先に貼って乾かしてから、コードをはめる。つなぎ目と使わないLANの差し込み口は<b>自己融着テープ＋ビニールテープ</b>で巻く。カメラの手前でコードを<b>U字にたるませる</b>。</span></div></div>
+    <div class="ag"><div><b>カバーの強さを確かめる</b><span>下から手で<b>強く押す</b>・軽くたたく。たわむ、グラつく、ペコペコ鳴るなら<b>付けずに相談</b>。</span></div></div>
+    <div class="ag"><div><b>測る</b><span><b>板の厚み</b>（ネジを抜いた穴のふちで）、<b>下の面の幅</b>、<b>地面からの高さ</b>。抜いたネジはお店へ持って行く。</span></div></div>
+    <div class="ag"><div><b>カメラを地面で試し、台座の穴を見る</b><span>全部つないで30分。台座の<b>穴の数と太さ</b>で、ナットとボルトを<b>M4かM5</b>に決める。</span></div></div>
+    <div class="ag"><div><b>位置を決めて、印を付ける</b><span>カメラを手で当てて<b>昼と夜</b>の映りとWi-Fiを見る。台座を当てて穴の位置に印。<b>カバーの端から2cmほど内側</b>に。釘の先で軽くくぼみを付けると、刃がすべらない。</span></div></div>
+    <div class="ag"><div><b>穴をあける</b><span><b>金属用の刃</b>で、まず細い刃（3mm）で下穴。次に、リベットナットの袋に書いてある太さ（M4で約6mm、M5で約7mm）まであける。<b>ゆっくり回して、押しすぎない</b>。削りくずは払う。</span></div></div>
+    <div class="ag"><div><b>リベットナットを付ける</b><span>ナットを工具にねじ込み、穴に差して<b>握る</b>。工具を外して、ナットが<b>空回りしないか</b>確かめる。</span></div></div>
+    <div class="ag"><div><b>すき間をうめて、台座を留める</b><span>ナットのまわりにコーキングを少し。台座を当てて、<b>ステンレスのボルト</b>で3〜4か所。<b>締めすぎない</b>（ナットが空回りする）。</span></div></div>
+    <div class="ag"><div><b>カメラ・ワイヤー・コード</b><span>カメラを台座に付け、<b>カメラ本体</b>からカーポートの枠へワイヤーを少したるませて結ぶ。コードは車庫の天井にクリップで留め、カメラの手前で<b>U字にたるませる</b>。つなぎ目と使わないLANの口は<b>自己融着テープ＋ビニールテープ</b>。</span></div></div>
+    <div class="ag"><div><b>燕のふんよけのネジをかえる</b><span>抜いたさびたネジを、<b>同じ太さ・長さのステンレス</b>にかえて戻す。</span></div></div>
    </div>
   </div>
  </div>
- <div class="ng">やってはいけないこと：コンセントを増やす・ライトやカメラを電気の線に直接つなぐ（直結）のは、<b>電気工事士の資格が必要</b>です。DIYは「コンセントに挿すまで」。</div>
+ <div class="ng">やってはいけないこと：コンセントを増やす・ライトやカメラを電気の線に直接つなぐ（直結）のは、<b>電気工事士の資格が必要</b>です。DIYは「コンセントに挿すまで」。木工用のドリル刃はアルミに使わない（すべって危ない）。</div>
 </section>
 
 <!-- 4 買い物 -->
 <section class="sec" id="s4">
  <div class="sec-h"><span class="n">04</span><h2>買い出しリスト</h2></div>
- <p class="msg"><b>赤い「確認」</b>の付いた物は、カメラが届いてから付属品と見くらべて買うと失敗しません。</p>
+ <p class="msg"><b>赤い「確認」</b>の付いた物は、測った数字やカメラの台座と見くらべてから買います。<b>工具は先に買ってよい</b>物です。</p>
  <div class="g2">
   <div class="card rv">
    <p class="ct">カメラまわり</p>
    <ul class="items">
     <li><span><b>Tapo C530WS</b>（付属：アダプター・台座・ネジ）</span><span>約8,000〜1.1万円</span></li>
-    <li><span><b>microSDカード</b> 64〜128GB・高耐久（High Endurance など）</span><span>録画用</span></li>
-    <li><span><b>DC延長ケーブル 5m</b>（太めの線） <b style="color:var(--bad)">確認</b>：プラグ外径5.5mm／内径2.1mmか・9Vで使えるか</span><span>電源</span></li>
-    <li><span>「防犯カメラ作動中」のプレート</span><span>道路から見える所に</span></li>
+    <li><span><b>高耐久マイクロSDカード</b> 128GB（High Endurance など）</span><span>2,000〜3,000円</span></li>
+    <li><span><b>DC延長ケーブル 5m</b>（太めの線） <b style="color:var(--bad)">確認</b>：プラグの太さ（外径5.5mm／内径2.1mmか）・9Vで使えるか</span><span>800〜1,500円</span></li>
+    <li><span>「防犯カメラ作動中」のプレート</span><span>300〜1,000円</span></li>
    </ul>
   </div>
   <div class="card rv">
    <p class="ct">取り付け・配線（ホームセンター）</p>
    <ul class="items">
-    <li><span><b>硬質塩ビ板</b> 厚さ3〜5mm（10〜15cm角）</span><span>台座の板</span></li>
-    <li><span><b>M4ステンレス皿ボルト・ナット</b>（長さ10〜15mm） <b style="color:var(--bad)">確認</b>：台座の穴に通るか</span><span>板と台座</span></li>
-    <li><span><b>弾性接着剤</b>（セメダイン スーパーXなど・屋外用）</span><span>板と軒天</span></li>
-    <li><span>屋外用の両面テープ（細く切って使う）</span><span>仮止め</span></li>
-    <li><span>ステンレスワイヤー＋留め具 または 耐候性の結束バンド（黒）</span><span>落下防止</span></li>
-    <li><span>ナイロンクリップ（アイボリー）</span><span>コード留め</span></li>
-    <li><span>自己融着テープ・ビニールテープ（黒）</span><span>防水</span></li>
+    <li><span><b>ナットリベッター</b>（手で握るタイプ・M3〜M6のナット付きセット）</span><span>2,500〜4,500円</span></li>
+    <li><span><b>金属用（鉄工用）のドリル刃</b> 3mm＋ナットの下穴の太さ</span><span>1,000〜2,500円</span></li>
+    <li><span><b>アルミのリベットナット</b> M4かM5 <b style="color:var(--bad)">確認</b>：袋の「使える板の厚み」に、測った厚みが入るか</span><span>セットに付属</span></li>
+    <li><span><b>ステンレスのボルト</b>（ナットと同じ太さ） <b style="color:var(--bad)">確認</b>：台座を持って行き、長さを合わせる</span><span rowspan="1">300〜600円</span></li>
+    <li><span><b>ふんよけの替えネジ</b>（ステンレス） <b style="color:var(--bad)">確認</b>：抜いたネジと同じ太さ・長さ</span><span>上に含む</span></li>
+    <li><span>屋外用のコーキング（変成シリコン・グレーか茶）</span><span>500〜900円</span></li>
+    <li><span>ステンレスワイヤー＋留め具</span><span>300〜800円</span></li>
+    <li><span>コード留め（ナイロンクリップなど）</span><span>500〜1,500円</span></li>
+    <li><span>自己融着テープ・ビニールテープ（黒）</span><span>500〜1,000円</span></li>
    </ul>
-   <p class="src">工具：木工用の電動ドリル（手持ち）、脚立、メジャー、ウエス。皿ボルトの頭を沈めるなら面取りのビットがあると楽。</p>
+   <p class="src">手持ちで使う物：電動ドライバー（ドリルとして）、脚立、メジャー、釘（印付け）、保護メガネ、ウエス。</p>
   </div>
  </div>
 </section>
@@ -451,31 +487,33 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 const $=s=>document.querySelector(s);
 /* ===== チェックリスト（このスマホだけに保存） ===== */
 const CL=[
- ["1 カメラが届いたら（家で）",[
-  ["a1","アダプターの電圧とプラグを確かめる","9V・0.85Aか。プラグの太さ（外径／内径）をメモ。延長ケーブルはこれに合わせて買う",1],
-  ["a2","付属のケーブルの長さを測る","約3mか。延長5mと合わせて、カメラまで届くか（約5m必要）",1],
-  ["a3","台座の穴の位置と太さ","塩ビ板の穴あけ用。M4ボルトが通るか",1],
-  ["a4","microSDカードを入れてアプリに登録","Tapoアプリでカメラを登録し、カードを初期化。2段階認証もここで",0],
-  ["a5","地面で全部つないで試す","アダプター＋延長5m＋カメラ。夜の赤外線と首振りを動かしても再起動しないか（30分ほど）",0]]],
- ["2 付ける日（板を貼る）",[
-  ["b1","仮に当てて映りとWi-Fiを見る","昼と夜。玄関灯が画面に入らないか。向かいの窓が入りすぎないか",1],
-  ["b2","塗装の確認","指でこすって白い粉が付かないか。爪で引っかいてはがれないか",0],
-  ["b3","掃除して乾かす","ほこり・クモの巣・カビ。完全に乾いてから",0],
-  ["b4","板を作る","皿ボルトを裏から通し、頭を沈めて裏を平らに",0],
-  ["b5","板を接着して仮止め","接着剤は全面、テープは両はしに細く。押し当てて仮止め",0],
-  ["b6","コード留めのクリップを先に貼る","30〜40cmおき。接着剤で貼って乾かしておく",0]]],
- ["3 1〜2日後（カメラを付ける）",[
-  ["c1","カメラを付ける","ナットで台座を留める。ぐらつかないか",0],
-  ["c2","落下防止ワイヤー","カメラ本体からカーポートの枠へ。少したるませる",0],
-  ["c3","コードをはめる","カメラの手前でU字にたるませる。余りは物置の裏で8の字に束ねる",0],
-  ["c4","防水処理","つなぎ目と使わないLANの口を、自己融着テープ＋ビニールテープで",0],
-  ["c5","アプリの設定","上下反転・人だけ通知・範囲・プライバシーマスク・ずっと録画",0]]],
+ ["1 先に確かめる（材料を買う前）",[
+  ["a1","カバーを強く押してみる","たわまない・グラつかない・ペコペコ鳴らないか。だめなら付けずに相談",1],
+  ["a2","カバーの板の厚みを測る","ネジを抜いた穴のふちで。リベットナットの「使える板の厚み」に使う",1],
+  ["a3","カバーの下の面の幅を測る","台座（約12cm）が、端から2cm内側に収まるか",1],
+  ["a4","地面から下の面までの高さ","2.3m以上あると、手が届きにくく安心",1],
+  ["a5","抜いたネジの太さと長さ","お店に持って行って、同じ物をステンレスで",1],
+  ["a6","ご両親のOK","台座で隠れる小さな穴を3〜4つ",0]]],
+ ["2 カメラが届いたら（家で）",[
+  ["b1","アダプターの電圧とプラグを確かめる","9V・0.85Aか。プラグの太さ（外径／内径）をメモ",1],
+  ["b2","台座の穴の数と太さ","M4かM5か。ナットとボルトをこれに合わせる",1],
+  ["b3","microSDカードを入れてアプリに登録","カードを初期化。2段階認証もここで",0],
+  ["b4","地面で全部つないで試す","アダプター＋延長5m＋カメラ。夜の赤外線と首振りを動かしても再起動しないか（30分ほど）",0]]],
+ ["3 付ける日",[
+  ["c1","その場所で映りとWi-Fiを見る","昼と夜。玄関灯が画面に入らないか。向かいの窓が入りすぎないか",1],
+  ["c2","印を付けて、下穴 → 本穴","金属用の刃で。端から2cm内側。ゆっくり",0],
+  ["c3","リベットナットを付ける","空回りしないか1つずつ確かめる",0],
+  ["c4","コーキングして、ボルトで台座を留める","3〜4か所。締めすぎない",0],
+  ["c5","カメラとワイヤー","カメラ本体からカーポートの枠へ、少したるませる",0],
+  ["c6","コード留め・防水","天井にクリップ。カメラの手前でU字。つなぎ目は自己融着テープ＋ビニールテープ",0],
+  ["c7","ふんよけのネジをステンレスに","同じ太さ・長さ",0],
+  ["c8","アプリの設定","上下反転・人だけ通知・範囲・向かいの窓を隠す・ずっと録画",0]]],
  ["4 ご両親に伝える",[
   ["d1","スマホで見られるように共有","ご両親とあなたのスマホの両方で",0],
   ["d2","カメラにさわらない・引っぱらない","ワイヤーやコードに物をかけない",0],
   ["d3","何か映ったら、すぐ連絡","知らない人の訪問・うろつく人",0]]]
 ];
-const KEY="jikka-bouhan-install";
+const KEY="jikka-bouhan-rivet";
 let st={};try{st=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){st={}}
 const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(st))}catch(e){}};
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));

@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<title>防犯カメラの見積りと仕様</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* レイアウト：上に結論と合計、続けて「見積り → 仕様 → 場所 → 当日 → お願い → 質問」。カードは2列、スマホで1列 */
+:root{
+--bg:#f4f5f9;--panel:#fff;--panel-2:#f8f9fc;--line:rgba(20,24,60,.08);--line-2:rgba(20,24,60,.14);
+--ink:#0f1226;--ink-2:#4c5070;--ink-3:#7a7e9c;
+--brand:#4f5bd5;--brand-2:#8b5cf6;--brand-s:rgba(79,91,213,.09);
+--s1:#2a78d6;--s2:#eb6834;--neutral:#c3c6d4;
+--good:#0a8a0a;--bad:#d03b3b;--warn:#a86400;--warn-s:rgba(250,178,25,.16);--bad-s:rgba(208,59,59,.08);--good-s:rgba(12,163,12,.09);
+--house:#e9ebf3;--garage:#dfe6f5;--road:#d4d7e2;--cover:#7a5a40;--cover-2:#a07d5f;
+--shadow:0 1px 2px rgba(15,18,50,.04),0 8px 24px -12px rgba(30,34,100,.16);
+--f-body:"Noto Sans JP","Hiragino Sans","Yu Gothic UI",sans-serif;--f-num:Inter,"Noto Sans JP",sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;
+--bg:#0b0c15;--panel:#14152a;--panel-2:#191a33;--line:rgba(160,170,255,.09);--line-2:rgba(160,170,255,.16);
+--ink:#eef0ff;--ink-2:#a9acd0;--ink-3:#8084ad;
+--brand:#7b88ff;--brand-2:#a78bfa;--brand-s:rgba(123,136,255,.14);
+--s1:#3987e5;--s2:#e46a38;--neutral:#4b4e6b;
+--good:#2fc72f;--bad:#ff6b6b;--warn:#fab219;--warn-s:rgba(250,178,25,.13);--bad-s:rgba(255,107,107,.12);--good-s:rgba(47,199,47,.12);
+--house:#22243f;--garage:#1c2a48;--road:#2a2c45;--cover:#9a7556;--cover-2:#6f543e;
+--shadow:0 12px 30px -16px rgba(0,0,0,.75)}}
+:root[data-theme="dark"]{color-scheme:dark;
+--bg:#0b0c15;--panel:#14152a;--panel-2:#191a33;--line:rgba(160,170,255,.09);--line-2:rgba(160,170,255,.16);
+--ink:#eef0ff;--ink-2:#a9acd0;--ink-3:#8084ad;
+--brand:#7b88ff;--brand-2:#a78bfa;--brand-s:rgba(123,136,255,.14);
+--s1:#3987e5;--s2:#e46a38;--neutral:#4b4e6b;
+--good:#2fc72f;--bad:#ff6b6b;--warn:#fab219;--warn-s:rgba(250,178,25,.13);--bad-s:rgba(255,107,107,.12);--good-s:rgba(47,199,47,.12);
+--house:#22243f;--garage:#1c2a48;--road:#2a2c45;--cover:#9a7556;--cover-2:#6f543e;
+--shadow:0 12px 30px -16px rgba(0,0,0,.75)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;transition:background-color .35s,color .35s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1040px;margin:0 auto;padding-block:10px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;align-items:center;gap:12px}
+.logo{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,var(--brand),var(--brand-2));flex:none;display:grid;place-items:center;color:#fff}
+.logo svg{width:16px;height:16px}
+.top b{font-size:14px;white-space:nowrap}
+.chips{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin-left:auto}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;text-decoration:none;color:var(--ink-2);font-size:13px;padding:5px 12px;border-radius:999px;border:1px solid var(--line-2);background:var(--panel)}
+.chips a:hover,.chips a:focus-visible{color:var(--brand);border-color:var(--brand);outline:none}
+.theme{flex:none;width:36px;height:36px;border-radius:10px;border:1px solid var(--line-2);background:var(--panel);color:var(--ink-2);display:grid;place-items:center;cursor:pointer;padding:0}
+.theme:focus-visible{outline:2px solid var(--brand);outline-offset:2px}
+.theme svg{width:17px;height:17px}
+.wrap{max-width:1040px;margin:0 auto;padding-block:18px 70px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.note{background:var(--warn-s);color:var(--warn);border-radius:10px;padding:9px 13px;font-size:13px;margin-bottom:16px}
+.hero{display:grid;grid-template-columns:1.25fr 1fr;gap:16px}
+.eyebrow{font-size:12.5px;letter-spacing:.08em;color:var(--brand);font-weight:700}
+h1{font-size:27px;line-height:1.35;margin:4px 0 10px;text-wrap:balance}
+.lede{color:var(--ink-2);margin:0 0 12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--shadow);min-width:0}
+.takeaways{background:linear-gradient(140deg,var(--brand-s),transparent 70%),var(--panel)}
+.takeaways h3{margin:0 0 6px;font-size:13px;color:var(--ink-2);font-weight:600}
+.tk{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.tk:first-of-type{border-top:0}
+.tk i{font-style:normal;width:24px;height:24px;border-radius:7px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+.tk p{margin:0;font-size:14px}
+.pill{display:inline-flex;align-items:center;border-radius:999px;padding:4px 12px;font-size:12.5px;font-weight:600;background:var(--good-s);color:var(--good);margin:0 6px 6px 0}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.kpi{padding:14px 16px}
+.k-lbl{color:var(--ink-2);font-size:12.5px}
+.k-val{font-size:24px;font-weight:700;margin-top:2px;letter-spacing:-.02em;font-family:var(--f-num)}
+.k-val small{font-size:13px;font-weight:600;color:var(--ink-2);margin-left:2px;font-family:var(--f-body)}
+.k-sub{font-size:12px;color:var(--ink-3)}
+.sec{margin-top:36px}
+.sec-h{display:flex;align-items:baseline;gap:10px;margin-bottom:4px}
+.sec-h .n{font-size:12px;font-weight:700;color:var(--brand);letter-spacing:.06em}
+.sec-h h2{font-size:20px;margin:0;text-wrap:balance}
+.msg{margin:0 0 12px;color:var(--ink-2);font-size:14px}
+.msg b{color:var(--ink)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ct{font-size:15px;font-weight:700;margin:0}
+.cs{font-size:12px;color:var(--ink-3);margin:2px 0 10px}
+.src{font-size:12px;color:var(--ink-3);margin:10px 0 0}
+/* 費用の帯 */
+.rng{display:grid;grid-template-columns:118px 1fr;gap:10px 10px;align-items:center;font-size:13px}
+.rng .lb{color:var(--ink-2);line-height:1.3}
+.rng .lb small{display:block;font-size:12px;font-weight:700;color:var(--ink);margin-top:2px}
+.track{position:relative;height:28px;border-radius:7px;background:var(--panel-2)}
+.bar{position:absolute;top:4px;bottom:4px;left:0;border-radius:5px;transform-origin:left center;transition:transform 1s cubic-bezier(.2,.8,.2,1)}
+.bar.mx{background:var(--neutral)}
+.bar.mn{background:var(--brand)}
+.anim:not(.go) .bar{transform:scaleX(0)}
+.rng em{position:absolute;top:50%;transform:translateY(-50%);font-style:normal;font-size:12.5px;font-weight:700;white-space:nowrap;color:var(--ink);font-family:var(--f-num)}
+.axis{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-3);margin-left:128px;margin-top:6px;font-family:var(--f-num)}
+.lg{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--ink-2);margin-top:8px}
+.lg span{display:inline-flex;align-items:center;gap:6px}
+.lg i{width:12px;height:12px;border-radius:3px;display:inline-block}
+/* 見積りの表 */
+.tbl-w{overflow-x:auto;margin:0 -4px}
+table{width:100%;border-collapse:collapse;font-size:13.5px}
+th,td{padding:9px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--ink-3);font-weight:600}
+td.q,th.q{text-align:center;width:40px}
+td.p,th.p{text-align:right;white-space:nowrap;font-family:var(--f-num);font-variant-numeric:tabular-nums}
+td small{display:block;color:var(--ink-3);font-size:12px;line-height:1.5}
+tr.grp td{background:var(--panel-2);font-weight:700;font-size:12.5px;color:var(--brand);padding:6px}
+tr.zero td.p{color:var(--good);font-weight:700}
+tr.sum td{border-bottom:0;border-top:2px solid var(--ink);font-weight:700;font-size:15px;padding-top:12px}
+tr.sum td.p{font-size:17px}
+.opt{list-style:none;margin:0;padding:0;font-size:13.5px}
+.opt li{padding:9px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:12px}
+.opt li:first-child{border-top:0}
+.opt li span:last-child{white-space:nowrap;color:var(--ink-2);font-family:var(--f-num)}
+.opt small{display:block;color:var(--ink-3);font-size:12px}
+/* 仕様 */
+.spec{display:grid;grid-template-columns:7.5em 1fr;gap:0;font-size:13.5px;margin:0}
+.spec dt,.spec dd{padding:8px 0;border-top:1px solid var(--line);margin:0}
+.spec dt:first-of-type,.spec dd:first-of-type{border-top:0}
+.spec dt{color:var(--ink-3);padding-right:8px}
+.spec dd b{color:var(--ink)}
+/* 図 */
+.map svg{display:block;width:100%;height:auto}
+.map text{font-family:var(--f-body)}
+.map .pin{transform-box:fill-box;transform-origin:center}
+.map.play .pin{animation:pop .5s cubic-bezier(.2,.8,.2,1.3) var(--d,0s) both}
+.map.play .beam{animation:fade .8s ease var(--d,.6s) both}
+@keyframes pop{from{opacity:0;transform:scale(.4)}to{opacity:1;transform:scale(1)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+/* 流れ */
+.agenda{display:grid;gap:10px;counter-reset:a}
+.ag{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:12px;border-radius:12px;border:1px solid var(--line);background:var(--panel-2)}
+.ag::before{counter-increment:a;content:counter(a);width:30px;height:30px;border-radius:9px;display:grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));font-family:var(--f-num)}
+.ag div>b{display:block;font-size:14.5px}
+.ag span{font-size:13px;color:var(--ink-2)}
+.ag .when{display:inline-block;font-size:11.5px;font-weight:700;color:var(--brand);background:var(--brand-s);border-radius:999px;padding:1px 8px;margin-left:6px;vertical-align:1px}
+/* お願い・確認 */
+.ask{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.ask li{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:11px 12px;border:1px solid var(--line);border-radius:12px;background:var(--panel-2);font-size:13.5px}
+.ask li b{display:block;font-size:14.5px}
+.ask .ic{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;font-size:12px;font-weight:700;color:#fff;background:var(--s2)}
+.st{list-style:none;margin:0;padding:0}
+.st li{display:flex;justify-content:space-between;align-items:flex-start;gap:10px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px}
+.st li:first-child{border-top:0}
+.st small{display:block;color:var(--ink-3);font-size:12px}
+.tag{flex:none;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;white-space:nowrap}
+.tag.ok{background:var(--good-s);color:var(--good)}
+.tag.todo{background:var(--warn-s);color:var(--warn)}
+.ng{background:var(--bad-s);color:var(--bad);border-radius:10px;padding:9px 12px;font-size:13px;margin-top:12px}
+/* 質問 */
+.qa{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.qa div{padding:13px;border:1px solid var(--line);border-radius:12px;background:var(--panel);font-size:13.5px;color:var(--ink-2)}
+.qa b{display:block;font-size:14.5px;color:var(--ink);margin-bottom:3px}
+.links{margin:0;padding-left:18px;font-size:12.5px;color:var(--ink-2)}
+.links a{color:var(--brand)}
+/* 動き（一度きり） */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (max-width:900px){.hero,.g2{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:600px){
+ h1{font-size:22px}.card{padding:15px;border-radius:14px}.top b{display:none}
+ .sec{margin-top:30px}.sec-h h2{font-size:18px}.k-val{font-size:20px}.kpis{gap:10px}
+ .rng{grid-template-columns:108px 1fr}.axis{margin-left:118px}.qa{grid-template-columns:1fr}.chips a{padding:4px 10px}
+ .spec{grid-template-columns:6.2em 1fr}}
+@media print{.top,.theme{display:none}.js .rv{opacity:1;transform:none}.card{box-shadow:none;break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="top"><div class="top-in">
+ <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div>
+ <b>防犯カメラの見積りと仕様</b>
+ <nav class="chips" aria-label="章">
+  <a href="#mitsumori">見積り</a><a href="#shiyou">仕様</a><a href="#basho">付ける場所</a><a href="#nagare">当日の流れ</a><a href="#onegai">お願い</a><a href="#qa">よくある質問</a>
+ </nav>
+ <button class="theme" id="theme" type="button" aria-label="明るさを切り替え" title="明るさを切り替え"></button>
+</div></div>
+
+<div class="wrap">
+<div class="note">値段は2026年11月に調べた<b>目安（税込）</b>です。お店や時期で変わります。<b>まだ何も注文していません。</b></div>
+
+<div class="hero">
+ <div class="card rv" style="display:flex;flex-direction:column;justify-content:space-between;gap:10px">
+  <div>
+   <div class="eyebrow">お見積り · 玄関前の防犯カメラ 1台</div>
+   <h1>玄関前に防犯カメラを1台。費用は全部で約1.7〜2.8万円、月々の支払いはありません</h1>
+   <p class="lede">取り付けは家族で行うので、<b>工事代はかかりません</b>。スマホで玄関前をいつでも見られて、人が来たら知らせてくれます。</p>
+  </div>
+  <div><span class="pill">月々 0円</span><span class="pill">工事代 0円</span><span class="pill">録画はカードに保存</span><span class="pill">雨の当たらない所</span></div>
+ </div>
+ <div class="card takeaways rv">
+  <h3>要点</h3>
+  <div class="tk"><i>1</i><p><b>できること</b>　玄関・自転車・車庫の入口・前の道を1台で映します。首振りで向きをかえられ、夜も映ります。人が来るとスマホに通知が届きます。</p></div>
+  <div class="tk"><i>2</i><p><b>付ける場所</b>　車庫の入口の上にある<b>茶色いアルミのカバーの下</b>。小さな穴を3〜4つあけてボルトで留めます。穴はカメラの台座に隠れます。</p></div>
+  <div class="tk"><i>3</i><p><b>お願いしたいこと</b>　穴あけのOK、車庫の奥のコンセント1口、当日にWi-Fiの名前とパスワードを教えていただくこと。</p></div>
+ </div>
+</div>
+
+<div class="kpis">
+ <div class="card kpi rv"><div class="k-lbl">費用の合計</div><div class="k-val"><span class="cu" data-to="1.7" data-dp="1">1.7</span>〜<span class="cu" data-to="2.8" data-dp="1">2.8</span><small>万円</small></div><div class="k-sub">道具代 約0.4〜0.7万円を含む</div></div>
+ <div class="card kpi rv"><div class="k-lbl">月々の支払い</div><div class="k-val"><span class="cu" data-to="0">0</span><small>円</small></div><div class="k-sub">録画はカードに。契約なし</div></div>
+ <div class="card kpi rv"><div class="k-lbl">電気代</div><div class="k-val"><small>月</small><span class="cu" data-to="170">170</span><small>円まで</small></div><div class="k-sub">多く見積もった場合</div></div>
+ <div class="card kpi rv"><div class="k-lbl">取り付け</div><div class="k-val"><small>約</small>半日</div><div class="k-sub">家族で。電気工事なし</div></div>
+</div>
+
+<!-- 見積り -->
+<section class="sec" id="mitsumori">
+ <div class="sec-h"><span class="n">01</span><h2>お見積り</h2></div>
+ <p class="msg">いちばん大きいのは<b>カメラ本体</b>です。<b>道具代（約0.4〜0.7万円）</b>は、ほかの作業にもずっと使えます。</p>
+ <div class="g2">
+  <div class="card rv anim" id="chart">
+   <p class="ct">何にいくらかかるか</p><p class="cs">濃い色＝安く買えたとき、薄い色＝高めのとき</p>
+   <div class="rng" id="rng"></div>
+   <div class="axis"><span>0</span><span>4,000</span><span>8,000</span><span>12,000円</span></div>
+   <div class="lg"><span><i style="background:var(--brand)"></i>安いとき</span><span><i style="background:var(--neutral)"></i>高いとき</span></div>
+  </div>
+  <div class="card rv">
+   <p class="ct">あとで足すなら（今回は入れていません）</p><p class="cs">必要になったら相談して決めます</p>
+   <ul class="opt">
+    <li><span>車庫の奥のセンサーライト<small>コンセント式。人が入ると点く（例：ムサシ LED-AC2014）</small></span><span>約5,500円</span></li>
+    <li><span>ネットに録画を預けるサービス<small>カードが盗まれても映像が残る。月額がかかる</small></span><span>月額あり</span></li>
+    <li><span>Wi-Fiの中継機<small>電波が弱かったときだけ</small></span><span>数千円</span></li>
+   </ul>
+  </div>
+ </div>
+ <div class="card rv" style="margin-top:14px">
+  <p class="ct">明細</p><p class="cs">数はすべて1つずつ</p>
+  <div class="tbl-w">
+  <table>
+   <thead><tr><th>品目</th><th class="p">目安の値段</th></tr></thead>
+   <tbody>
+    <tr class="grp"><td colspan="2">カメラと録画</td></tr>
+    <tr><td>防犯カメラ TP-Link Tapo C530WS<small>アダプター・台座・ネジ付き</small></td><td class="p">8,000〜11,000円</td></tr>
+    <tr><td>録画用のカード（microSD 128GB・長持ちするタイプ）</td><td class="p">2,000〜3,000円</td></tr>
+    <tr class="grp"><td colspan="2">電源・コード</td></tr>
+    <tr><td>電源の延長コード 5m<small>カメラ専用の細いコード（9V用）</small></td><td class="p">800〜1,500円</td></tr>
+    <tr><td>コードを天井に留める部品</td><td class="p">500〜1,500円</td></tr>
+    <tr><td>防水テープ（つなぎ目に巻く）</td><td class="p">500〜1,000円</td></tr>
+    <tr class="grp"><td colspan="2">取り付けの材料</td></tr>
+    <tr><td>ステンレスのボルト・替えネジ<small>さびない。鳥のふんよけのネジ1本もかえる</small></td><td class="p">300〜600円</td></tr>
+    <tr><td>屋外用のすき間うめ（コーキング）<small>穴のまわりの雨水よけ</small></td><td class="p">500〜900円</td></tr>
+    <tr><td>落下防止のワイヤー<small>念のため、カメラとカーポートの枠をつなぐ</small></td><td class="p">300〜800円</td></tr>
+    <tr class="grp"><td colspan="2">道具（あとでも使える）</td></tr>
+    <tr><td>リベットナットの工具（ナット付きのセット）<small>アルミの板にネジ穴を作る道具</small></td><td class="p">2,500〜4,500円</td></tr>
+    <tr><td>金属用のドリル刃</td><td class="p">1,000〜2,500円</td></tr>
+    <tr class="grp"><td colspan="2">そのほか</td></tr>
+    <tr><td>「防犯カメラ作動中」のプレート</td><td class="p">300〜1,000円</td></tr>
+    <tr class="zero"><td>取り付け工事<small>家族で行います</small></td><td class="p">0円</td></tr>
+    <tr class="zero"><td>電動ドライバー・脚立<small>手持ちの物を使います</small></td><td class="p">0円</td></tr>
+    <tr class="sum"><td>合計（目安）</td><td class="p">16,700〜28,300円</td></tr>
+   </tbody>
+  </table>
+  </div>
+  <p class="src">カメラの値段は価格.com・発売時の発表などから（セールで約8,000円まで下がることがあります）。ほかはホームセンター・通販のよくある値段です。</p>
+ </div>
+</section>
+
+<!-- 仕様 -->
+<section class="sec" id="shiyou">
+ <div class="sec-h"><span class="n">02</span><h2>仕様</h2></div>
+ <p class="msg">カメラは<b>屋外用</b>で、雨やほこりに強い作りです。<b>雨に弱いのはアダプターだけ</b>なので、車庫の奥に置きます。</p>
+ <div class="g2">
+  <div class="card rv">
+   <p class="ct">カメラ</p>
+   <dl class="spec" style="margin-top:6px">
+    <dt>機種</dt><dd>TP-Link Tapo C530WS（1台）</dd>
+    <dt>画質</dt><dd>3K（顔や服の色がわかる細かさ）</dd>
+    <dt>向き</dt><dd>首振りできる。スマホから左右・上下に動かせる</dd>
+    <dt>夜</dt><dd>暗くても映る</dd>
+    <dt>雨・ほこり</dt><dd>IP66（屋外で使える）。<b>アダプターは防水ではない</b></dd>
+    <dt>大きさ</dt><dd class="num">約12.4 × 12.3 × 9cm</dd>
+    <dt>電源</dt><dd>付属のアダプター（9V・0.85A）</dd>
+    <dt>つなぎ方</dt><dd>家のWi-Fi</dd>
+   </dl>
+  </div>
+  <div class="card rv">
+   <p class="ct">録画・通知・見る人</p>
+   <dl class="spec" style="margin-top:6px">
+    <dt>録画</dt><dd>カメラに入れたカード（128GB）に<b>ずっと録画</b>。いっぱいになると古い物から自動で消える</dd>
+    <dt>通知</dt><dd>人が映ったらスマホに届く。家の前だけを見張るように設定</dd>
+    <dt>見る人</dt><dd>ご両親と家族のスマホ（アプリで共有）</dd>
+    <dt>ご近所</dt><dd>向かいの家の窓などは、画面の上で黒く隠す</dd>
+    <dt>守り</dt><dd>パスワードは初めのままにしない。2段階の確認をオン</dd>
+    <dt>月額</dt><dd><b>なし</b></dd>
+    <dt>電気代</dt><dd>多く見積もっても月170円ほど</dd>
+   </dl>
+  </div>
+  <div class="card rv">
+   <p class="ct">取り付け</p>
+   <dl class="spec" style="margin-top:6px">
+    <dt>場所</dt><dd>車庫の入口の上、<b>茶色いアルミのカバーの下の面</b>（道路側の端・玄関寄り）</dd>
+    <dt>高さ</dt><dd>地面から2.3m以上（当日に測る）</dd>
+    <dt>留め方</dt><dd>カバーに小さな穴（直径6〜7mm）を<b>3〜4か所</b>。アルミ用のナットを付けて、<b>ステンレスのボルト</b>で台座を留める</dd>
+    <dt>雨水よけ</dt><dd>穴のまわりとボルトにコーキング</dd>
+    <dt>落下防止</dt><dd>1か所がゆるんでも落ちない留め方。念のためワイヤーもつなぐ</dd>
+    <dt>外すとき</dt><dd>ボルトを外すだけ。穴は台座の下に隠れる</dd>
+    <dt>鳥のふんよけ</dt><dd>そのまま残す。さびたネジ1本をステンレスにかえる</dd>
+   </dl>
+  </div>
+  <div class="card rv">
+   <p class="ct">電源・コード</p>
+   <dl class="spec" style="margin-top:6px">
+    <dt>コンセント</dt><dd>車庫の奥（物置と外壁のすき間）の1口</dd>
+    <dt>コードの長さ</dt><dd>必要なのは約5m。付属の約3m＋延長5m＝8mを用意</dd>
+    <dt>通り道</dt><dd>車庫の中の天井づたいに入口の上まで。<b>外からはほとんど見えない</b></dd>
+    <dt>つなぎ目</dt><dd>防水テープで巻く。アダプターは雨の当たらない車庫の奥</dd>
+    <dt>電気工事</dt><dd><b>なし</b>。コンセントに挿すだけ</dd>
+   </dl>
+  </div>
+ </div>
+</section>
+
+<!-- 付ける場所 -->
+<section class="sec" id="basho">
+ <div class="sec-h"><span class="n">03</span><h2>付ける場所</h2></div>
+ <p class="msg">ここなら<b>Wi-Fiが届き、雨も当たらず</b>、道路からカメラが見えるので、それだけで近づきにくくなります。</p>
+ <div class="g2">
+  <div class="card map rv" id="m1">
+   <p class="ct">正面から見た図</p><p class="cs">道路から家を見たところ。左が車庫、右が玄関</p>
+   <svg viewBox="0 0 360 236" role="img" aria-label="家の正面図。車庫の入口の上にある茶色いカバーの右端の下にカメラ。コードは車庫の奥のコンセントから天井を通ってカメラへ">
+    <rect x="0" y="206" width="360" height="30" fill="var(--road)"/>
+    <text x="180" y="226" text-anchor="middle" font-size="11" fill="var(--ink-3)">前の道</text>
+    <rect x="18" y="44" width="324" height="162" fill="var(--house)" stroke="var(--line-2)"/>
+    <rect x="30" y="80" width="138" height="126" fill="var(--garage)"/>
+    <rect x="26" y="68" width="146" height="12" rx="1.5" fill="var(--cover)"/>
+    <rect x="80" y="140" width="66" height="66" fill="none" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
+    <text x="113" y="176" text-anchor="middle" font-size="10" fill="var(--ink-3)">物置（奥）</text>
+    <text x="99" y="112" text-anchor="middle" font-size="13" font-weight="700" fill="var(--ink-2)">車庫</text>
+    <rect x="226" y="86" width="62" height="120" fill="var(--panel)" stroke="var(--line-2)"/>
+    <text x="257" y="150" text-anchor="middle" font-size="11" fill="var(--ink-3)">玄関</text>
+    <circle cx="298" cy="82" r="5" fill="var(--warn)" fill-opacity=".7"/>
+    <text x="306" y="86" font-size="10" fill="var(--ink-3)">玄関灯</text>
+    <rect x="294" y="168" width="42" height="38" fill="none" stroke="var(--ink-3)" stroke-dasharray="3 3"/>
+    <text x="315" y="191" text-anchor="middle" font-size="9.5" fill="var(--ink-3)">自転車</text>
+    <path d="M10 40 H350" stroke="var(--ink)" stroke-width="7" stroke-linecap="round"/>
+    <line x1="14" y1="40" x2="14" y2="206" stroke="var(--ink)" stroke-width="4"/>
+    <line x1="346" y1="40" x2="346" y2="206" stroke="var(--ink)" stroke-width="4"/>
+    <text x="350" y="32" text-anchor="end" font-size="9.5" fill="var(--ink-3)">カーポートの枠</text>
+    <path class="beam" style="--d:.7s" d="M156 92 L30 206 L340 206 Z" fill="var(--s1)" fill-opacity=".12"/>
+    <path class="beam" style="--d:.9s" d="M44 196 V86 H144" fill="none" stroke="var(--s2)" stroke-width="2.4" stroke-dasharray="5 4"/>
+    <g class="pin" style="--d:.5s"><rect x="38" y="190" width="12" height="12" rx="2" fill="var(--s2)"/><text x="54" y="200" font-size="9.5" font-weight="700" fill="var(--s2)">コンセント（奥）</text></g>
+    <g class="pin" style="--d:.1s"><rect x="148" y="80" width="16" height="5" fill="var(--ink-2)"/><circle cx="156" cy="93" r="9" fill="var(--s1)"/><circle cx="156" cy="95" r="3.2" fill="#fff"/></g>
+    <g class="pin" style="--d:.3s"><path d="M170 74 L196 58" stroke="var(--s1)" stroke-width="1.4"/><text x="198" y="58" font-size="10.5" font-weight="700" fill="var(--s1)">ここ</text><text x="198" y="71" font-size="9.5" fill="var(--ink-2)">（茶色いカバーの下）</text></g>
+   </svg>
+   <div class="lg"><span><i style="background:var(--s1)"></i>カメラと映る範囲</span><span><i style="background:var(--s2)"></i>コード（車庫の中）</span><span><i style="background:var(--cover)"></i>茶色いカバー</span></div>
+  </div>
+  <div class="card map rv" id="m2">
+   <p class="ct">留める所の断面</p><p class="cs">カバーを横から切ったところ。左が車庫側、右が道路側</p>
+   <svg viewBox="0 0 360 230" role="img" aria-label="茶色いアルミのカバーの断面。中は空洞。下の面にリベットナットを付け、ステンレスのボルトでカメラの台座を留める。穴のまわりはコーキング">
+    <rect x="70" y="10" width="200" height="62" fill="var(--house)" stroke="var(--line-2)"/>
+    <text x="170" y="40" text-anchor="middle" font-size="10.5" fill="var(--ink-3)">家の梁（はり）</text>
+    <path d="M60 10 V84 M300 10 V112 M60 10 H300" fill="none" stroke="var(--cover)" stroke-width="0"/>
+    <path d="M62 18 H296 V112 H62 Z" fill="none"/>
+    <path d="M58 16 H302 V114 H58 V70" fill="none" stroke="var(--cover)" stroke-width="4" stroke-linejoin="round"/>
+    <text x="180" y="94" text-anchor="middle" font-size="10" fill="var(--ink-3)">中は空洞</text>
+    <g class="pin" style="--d:.3s">
+     <rect x="205" y="98" width="10" height="12" rx="2" fill="var(--ink-2)"/><rect x="255" y="98" width="10" height="12" rx="2" fill="var(--ink-2)"/>
+     <rect x="203" y="96" width="14" height="4" rx="1" fill="var(--ink-2)"/><rect x="253" y="96" width="14" height="4" rx="1" fill="var(--ink-2)"/>
+    </g>
+    <rect class="beam" style="--d:.5s" x="194" y="116" width="82" height="4" fill="var(--s2)" fill-opacity=".8"/>
+    <rect x="192" y="120" width="86" height="10" rx="2" fill="var(--panel)" stroke="var(--line-2)"/>
+    <line x1="210" y1="104" x2="210" y2="128" stroke="var(--ink)" stroke-width="3"/><line x1="260" y1="104" x2="260" y2="128" stroke="var(--ink)" stroke-width="3"/>
+    <rect x="204" y="128" width="12" height="4" fill="var(--ink)"/><rect x="254" y="128" width="12" height="4" fill="var(--ink)"/>
+    <path d="M205 132 h60 v14 a30 30 0 0 1 -60 0 z" fill="var(--panel)" stroke="var(--line-2)"/>
+    <circle cx="235" cy="160" r="20" fill="var(--panel-2)" stroke="var(--line-2)"/>
+    <circle cx="235" cy="166" r="7" fill="var(--s1)"/>
+    <path class="beam" style="--d:.9s" d="M258 158 Q310 196 340 150" fill="none" stroke="var(--ink-2)" stroke-width="1.6" stroke-dasharray="2 3"/>
+    <rect x="334" y="136" width="14" height="14" fill="var(--ink)"/>
+    <g font-size="10" fill="var(--ink-2)">
+     <text x="56" y="132" text-anchor="end" font-size="9.5" fill="var(--ink-3)">車庫側</text>
+     <text x="340" y="104" text-anchor="end" font-size="9.5" fill="var(--ink-3)">道路側</text>
+     <text class="pin" style="--d:.2s" x="12" y="150" fill="var(--cover)" font-weight="700">茶色いアルミのカバー</text>
+     <text class="pin" style="--d:.35s" x="12" y="168">ナット（中でつぶれて</text><text class="pin" style="--d:.35s" x="12" y="180">抜けなくなる）</text>
+     <text class="pin" style="--d:.5s" x="12" y="198" fill="var(--s2)" font-weight="700">すき間うめ（雨水よけ）</text>
+     <text class="pin" style="--d:.6s" x="12" y="216">ステンレスのボルト 3〜4本</text>
+     <text class="pin" style="--d:.9s" x="348" y="222" text-anchor="end">落下防止ワイヤー</text>
+     <text class="pin" style="--d:.7s" x="282" y="184">カメラ</text>
+    </g>
+    <path d="M128 164 L205 104 M128 196 L194 120 M150 212 L208 130" stroke="var(--line-2)" stroke-width="1"/>
+   </svg>
+   <div class="lg"><span><i style="background:var(--cover)"></i>カバー</span><span><i style="background:var(--s2)"></i>すき間うめ</span><span><i style="background:var(--ink-2)"></i>ナット・ボルト</span></div>
+  </div>
+ </div>
+</section>
+
+<!-- 当日の流れ -->
+<section class="sec" id="nagare">
+ <div class="sec-h"><span class="n">04</span><h2>取り付けまでの流れ</h2></div>
+ <p class="msg">取り付けの日は<b>半日ほど</b>です。脚立を使うので、<b>車は車庫から出しておいてください</b>。</p>
+ <div class="card rv">
+  <div class="agenda">
+   <div class="ag"><div><b>材料を買う<span class="when">ご両親のOKのあと</span></b><span>ネジとボルトは、抜いたネジとカメラの台座を持っていき、お店で合わせます。</span></div></div>
+   <div class="ag"><div><b>カメラを先に試す<span class="when">届いたら</span></b><span>付ける前に、地面で全部つないで30分ほど動かし、電源とWi-Fiに問題がないかを見ます。</span></div></div>
+   <div class="ag"><div><b>位置を決める<span class="when">当日</span></b><span>カメラを当ててみて、玄関・自転車・道が映るか、Wi-Fiが届くかを確かめます。</span></div></div>
+   <div class="ag"><div><b>カバーに小さな穴をあけて、カメラを留める</b><span>穴は3〜4つ。アルミ用のナットを付けて、すき間うめをしてから、ステンレスのボルトで台座を留めます。</span></div></div>
+   <div class="ag"><div><b>コードを通して、つなぎ目を防水</b><span>車庫の中の天井づたいにコードを留め、つなぎ目を防水テープで巻きます。</span></div></div>
+   <div class="ag"><div><b>スマホの設定と使い方の説明</b><span>通知の設定、ご両親のスマホへの共有、ご近所の窓を隠す設定。見方と、録画の見返し方をお伝えします。</span></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- お願い -->
+<section class="sec" id="onegai">
+ <div class="sec-h"><span class="n">05</span><h2>お願いしたいことと、まだ確かめること</h2></div>
+ <p class="msg">左の5つを決めていただければ、材料を買い始められます。右の<b>「まだ」</b>は、次に行ったときにこちらで測ります。</p>
+ <div class="g2">
+  <div class="card rv">
+   <p class="ct">ご両親にお願いしたいこと</p><p class="cs">決めていただくこと・用意していただくもの</p>
+   <ul class="ask">
+    <li><span class="ic">1</span><div><b>カバーに小さな穴をあけてよいか</b>直径6〜7mmを3〜4つ。カメラの台座に隠れて見えません。</div></li>
+    <li><span class="ic">2</span><div><b>通知を誰のスマホに送るか</b>ご両親だけ、家族も、など。あとで変えられます。</div></li>
+    <li><span class="ic">3</span><div><b>Wi-Fiの名前とパスワード</b>ルーターに貼ってある紙を、当日見せてください。このページやメールには書きません。</div></li>
+    <li><span class="ic">4</span><div><b>取り付けの日の都合</b>半日ほど。車を車庫から出しておいてください。</div></li>
+    <li><span class="ic">5</span><div><b>ご近所にひとこと</b>「防犯カメラを付けました。お宅は映りません」と伝えておくと安心です。</div></li>
+   </ul>
+  </div>
+  <div class="card rv">
+   <p class="ct">こちらで確かめること</p><p class="cs">今日（11月23日）までにわかったこと／次に測ること</p>
+   <ul class="st">
+    <li><span>付ける所は平らなアルミのカバー</span><span class="tag ok">確認済み</span></li>
+    <li><span>カバーの中は空洞で、端は閉じている</span><span class="tag ok">確認済み</span></li>
+    <li><span>鳥のふんよけがネジで留まっている<small>同じ方法でカメラも留められる</small></span><span class="tag ok">確認済み</span></li>
+    <li><span>コンセントからの長さ 約5m</span><span class="tag ok">確認済み</span></li>
+    <li><span>カバーを押してもたわまないか<small>いちばん大事。グラつくなら付け方を考え直す</small></span><span class="tag todo">まだ</span></li>
+    <li><span>カバーの板の厚み<small>ナットの種類が決まる</small></span><span class="tag todo">まだ</span></li>
+    <li><span>下の面の幅<small>台座（約12cm）が収まるか</small></span><span class="tag todo">まだ</span></li>
+    <li><span>地面からの高さ（2.3m以上か）</span><span class="tag todo">まだ</span></li>
+    <li><span>その場所までWi-Fiが届くか</span><span class="tag todo">まだ</span></li>
+    <li><span>カメラの台座の穴<small>カメラが届いてから</small></span><span class="tag todo">まだ</span></li>
+   </ul>
+  </div>
+ </div>
+ <div class="ng">コンセントを増やす・カメラを電気の線に直接つなぐ工事は、資格が要るので行いません。今回は<b>コンセントに挿すだけ</b>です。</div>
+</section>
+
+<!-- よくある質問 -->
+<section class="sec" id="qa">
+ <div class="sec-h"><span class="n">06</span><h2>よくある質問</h2></div>
+ <div class="qa">
+  <div class="rv"><b>電気代はどれくらい？</b>多く見積もっても月170円ほどです。カメラの最大の電気（9V×0.85A＝約7.7W）を1か月ずっと使い、1kWh＝31円で計算しました。ふだんはもっと少なくなります。</div>
+  <div class="rv"><b>ご近所が映りませんか？</b>向かいの家の窓などは、スマホの画面の上で黒く隠せます。通知も家の前だけにします。</div>
+  <div class="rv"><b>Wi-Fiが切れたら？</b>電気が来ていれば、カードへの録画は続きます。スマホで見られるのは、Wi-Fiが戻ってからです。</div>
+  <div class="rv"><b>停電したら？</b>止まります。電気が戻ると、自動で動き出します。</div>
+  <div class="rv"><b>録画はどれくらい残る？</b>カードがいっぱいになると、古い物から自動で消えて上書きされます。何日分残るかは、画質の設定で変わります。</div>
+  <div class="rv"><b>外したくなったら？</b>ボルトを外せば外せます。残った穴は、すき間うめでふさげます。</div>
+  <div class="rv"><b>映像を他人に見られない？</b>見られるのは、カードと、共有した家族のスマホだけです。パスワードと2段階の確認で守ります。</div>
+  <div class="rv"><b>雨や台風は大丈夫？</b>カメラは屋外用（IP66）で、付ける所は雨が当たりにくい場所です。3〜4か所で留め、落下防止のワイヤーもつなぎます。</div>
+ </div>
+ <div class="card rv" style="margin-top:14px">
+  <p class="ct">調べた先</p>
+  <ol class="links">
+   <li><a href="https://www.tapo.com/jp/product/tapo-c530ws-security-camera/v2/1-pack/specs" target="_blank" rel="noopener">TP-Link：Tapo C530WS の仕様（9V・0.85A、IP66、大きさ）</a></li>
+   <li><a href="https://www.tapo.com/jp/product/smart-camera/tapo-c530ws/" target="_blank" rel="noopener">TP-Link：Tapo C530WS の製品ページ</a></li>
+   <li><a href="https://review.kakaku.com/review/K0001704965/" target="_blank" rel="noopener">価格.com：Tapo C530WS</a>／<a href="https://internet.watch.impress.co.jp/docs/news/1644514.html" target="_blank" rel="noopener">Impress：発売時の値段</a></li>
+   <li><a href="https://joshinweb.jp/kaden/54357/4954849540028.html" target="_blank" rel="noopener">Joshin：ムサシ コンセント式センサーライト</a></li>
+  </ol>
+  <p class="src">電気代の1kWh＝31円は、家電の電気代の表示に使われる目安の単価です。このページは見積りと計画です。注文・購入はしていません。</p>
+ </div>
+</section>
+</div>
+
+<script>
+(function(){
+document.documentElement.classList.add('js');
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+/* ===== 費用の帯（データ） ===== */
+const COST=[
+ ["カメラ本体",8000,11000],
+ ["録画カード",2000,3000],
+ ["電源・コード",1800,4000],
+ ["取り付け材料",1100,2300],
+ ["道具",3500,7000],
+ ["プレート",300,1000]];
+const MAXV=12000,yen=n=>n.toLocaleString('ja-JP');
+$('#rng').innerHTML=COST.map(([l,a,b],i)=>{
+ const pa=a/MAXV*100,pb=b/MAXV*100;
+ return `<div class="lb">${l}<small class="num">${yen(a)}〜${yen(b)}円</small></div><div class="track"><div class="bar mx" style="width:${pb}%;transition-delay:${i*.08}s"></div><div class="bar mn" style="width:${pa}%;transition-delay:${i*.08+.1}s"></div></div>`}).join('');
+/* ===== 明るさの切り替え ===== */
+const root=document.documentElement,tb=$('#theme');
+const SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>';
+const MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>';
+const isDark=()=>root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+const paint=()=>{tb.innerHTML=isDark()?SUN:MOON};
+try{const t=localStorage.getItem('mm-theme');if(t)root.dataset.theme=t}catch(e){}
+paint();
+tb.addEventListener('click',()=>{root.dataset.theme=isDark()?'light':'dark';try{localStorage.setItem('mm-theme',root.dataset.theme)}catch(e){}paint()});
+/* ===== 数字のカウントアップ ===== */
+function count(el){if(el.dataset.done)return;el.dataset.done=1;const to=+el.dataset.to,dp=+(el.dataset.dp||0),t0=performance.now(),D=900;
+ const step=t=>{const k=Math.min(1,(t-t0)/D),e=1-Math.pow(1-k,3);el.textContent=(to*e).toFixed(dp);if(k<1)requestAnimationFrame(step)};
+ if(to===0){el.textContent='0';return}requestAnimationFrame(step)}
+/* ===== 画面に入ったら動かす（一度きり） ===== */
+function show(el){if(el.classList.contains('in'))return;el.classList.add('in');
+ if(el.classList.contains('anim'))el.classList.add('go');
+ if(el.classList.contains('map'))el.classList.add('play');
+ el.querySelectorAll('.cu').forEach(count)}
+const rvs=$$('.rv');
+if('IntersectionObserver' in window){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target)}}),{threshold:.12});rvs.forEach(el=>io.observe(el))}
+const check=()=>{const h=innerHeight;rvs.forEach(el=>{const r=el.getBoundingClientRect();if(r.top<h*.92&&r.bottom>0)show(el)})};
+addEventListener('scroll',check,{passive:true});requestAnimationFrame(check);
+setTimeout(()=>rvs.forEach(show),2500);
+})();
+</script>
+</body>
+</html>

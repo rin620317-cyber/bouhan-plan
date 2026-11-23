@@ -163,6 +163,8 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 .cmp tbody th{color:var(--ink-3);font-weight:600;white-space:nowrap}
 .cmp td.g{color:var(--good);font-weight:600}.cmp td.w{color:var(--warn)}
 @media (max-width:600px){.card.map{padding-left:8px;padding-right:8px}.card.map .ct,.card.map .cs,.card.map .lg,.card.map .src{padding-left:6px;padding-right:6px}}
+#est .rng{grid-template-columns:118px 1fr;gap:10px}#est .rng .lb{line-height:1.3}#est .rng .lb small{display:block;font-size:12px;font-weight:700;color:var(--ink);margin-top:2px}#est .track{height:26px}#est .axis{margin-left:128px}
+@media (max-width:600px){#est .rng{grid-template-columns:108px 1fr}#est .axis{margin-left:118px}}
 </style>
 </head>
 <body>
@@ -170,7 +172,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
  <div class="logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9H3z"/><path d="M9 20v-6h6v6"/></svg></div>
  <b>実家の防犯プラン</b>
  <nav class="chips">
-  <a href="#s1">決まったこと</a><a href="#s2">場所と配線</a><a href="#s3">付け方</a><a href="#s4">買い物</a><a href="#s5">チェック</a><a href="#s6">設定・困ったとき</a><a href="#s7">ほかの対策</a>
+  <a href="#s2">付ける場所</a><a href="#s3">付け方</a><a href="#est">費用</a><a href="#s1">決まったこと</a><a href="#s4">買い物</a><a href="#s5">チェック</a><a href="#s6">設定・困ったとき</a><a href="#s7">ほかの対策</a>
  </nav>
  <button class="theme" id="theme" type="button" aria-label="ライト／ダークを切り替え" title="ライト／ダークを切り替え"></button>
 </div></div>
@@ -202,54 +204,9 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
  <div class="card kpi rv"><div class="k-lbl">留める所</div><div class="k-val num">4<small>か所</small></div><div class="k-sub">下穴なし・台座で隠れる</div></div>
 </div>
 
-<!-- 1 決まったこと -->
-<section class="sec" id="s1">
- <div class="sec-h"><span class="n">01</span><h2>決まったこと</h2></div>
- <p class="msg">11月23日に現地で見て決めた内容です。<b>接着はやめて、ピアスビスで留めます。</b></p>
- <div class="g2">
-  <div class="card rv">
-   <p class="ct">機材と付け方</p>
-   <dl class="spec" style="margin-top:8px">
-    <dt>カメラ</dt><dd>TP-Link Tapo C530WS（3K・首振り・屋外用・Wi-Fi）</dd>
-    <dt>録画</dt><dd>高耐久マイクロSDカード 128GB（例：SanDisk High Endurance）。月額なし</dd>
-    <dt>電源</dt><dd>付属のアダプター（<b>9V・0.85A</b>）＋DC延長ケーブル 5m。車庫の奥のコンセント（<b>カメラの下・物置の右</b>、よしずの裏）から</dd>
-    <dt>つなぎ方</dt><dd>Wi-Fi（カーポートの前は届かないので、家側に付ける）</dd>
-    <dt>場所</dt><dd>車庫の入口の上（車の上）、<b>燕のふんよけが付いている茶色いアルミの板の下の面</b>。道路側の端の玄関寄り。逆さに吊る</dd>
-    <dt>固定</dt><dd><b>ステンレスのピアスビス</b>で台座を<b>4か所</b>留める。下穴なし。ネジ穴のまわりはコーキング</dd>
-    <dt>落下防止</dt><dd>念のため、カメラ本体から<b>カバーの横にピアスビス1本で付けた留め具</b>へ、短いワイヤー（カーポートの枠は約1m離れていて遠い）。ネジのゆるみに備えるもの</dd>
-    <dt>工具</dt><dd><b>手持ちの電動ドライバーだけ</b>（ドリル刃は使わない）</dd>
-   </dl>
-  </div>
-  <div class="card rv">
-   <p class="ct">現地でわかったこと（11月23日）</p><p class="cs">表からネジで留める方法に決めた理由</p>
-   <ul class="where">
-    <li><span class="ic" style="background:var(--good)">✓</span><div><b>カバーは平らなアルミで、中は空洞</b>たたくとアルミの音だけ。端は閉じている。<b>裏からナットを当てられない</b>ので、表から留められるネジにする。</div></li>
-    <li><span class="ic" style="background:var(--good)">✓</span><div><b>燕のふんよけ（家を買ったときから）は、ネジでアルミに直接</b>抜いたネジは先が平らな機械ネジで、裏にナットはなかった。<b>同じ考え方で留められる</b>証拠。</div></li>
-    <li><span class="ic" style="background:var(--good)">✓</span><div><b>巻き付けはできない</b>カバーのまわりにすき間がない。</div></li>
-    <li><span class="ic" style="background:var(--bad)">×</span><div><b>接着はやめた</b>凸凹の吹付塗装に貼る方法は、年月がたつと塗装ごとはがれる心配がある。落ちる先は玄関の前。</div></li>
-   </ul>
-  </div>
- </div>
- <div class="card rv" style="margin-top:14px">
-  <p class="ct">ピアスビスに決めた理由と、気をつけること</p><p class="cs">知人のおすすめ。先がドリルになったネジで、下穴なしで電動ドライバーだけで留められる</p>
-  <div style="overflow-x:auto"><table class="cmp">
-   <thead><tr><th></th><th>リベットナット（別案）</th><th>ピアスビス（今回）</th></tr></thead>
-   <tbody>
-    <tr><th>下穴</th><td>要る</td><td class="g">要らない</td></tr>
-    <tr><th>工具</th><td>ナットリベッター（約3,000円）</td><td class="g">手持ちのドライバー</td></tr>
-    <tr><th>手間</th><td>多い</td><td class="g">少ない</td></tr>
-    <tr><th>年月の強さ</th><td class="g">強い。裏でつぶれて抜けない</td><td class="w">薄い板（1〜2mm）はネジ山が1〜2山しかかからず、吊り下げの向きで少しずつゆるみやすい</td></tr>
-    <tr><th>失敗しやすい所</th><td>下穴の太さを守れば少ない</td><td class="w">締めすぎると空回りして効かなくなる</td></tr>
-    <tr><th>付け外し</th><td class="g">何度でもできる</td><td class="w">くり返すと穴が広がる</td></tr>
-   </tbody>
-  </table></div>
-  <p class="src">気をつけること：<b>ステンレス製</b>を4本、電動ドライバーは<b>弱い設定で、最後は手で締める</b>。ネジ穴にコーキング、<b>落下防止ワイヤーは必ず</b>。カバーを押してたわむ・板がとても薄いときは、リベットナット（別案）を考える。</p>
- </div>
-</section>
-
 <!-- 2 場所と配線 -->
 <section class="sec" id="s2">
- <div class="sec-h"><span class="n">02</span><h2>付ける場所と、コードの通り道</h2></div>
+ <div class="sec-h"><span class="n">01</span><h2>付ける場所と、コードの通り道</h2></div>
  <p class="msg">カメラは<b>玄関灯から少し離れた</b>カバーの右端に付けます。コードは<b>車庫の中を通す</b>ので、外からはほとんど見えません。</p>
  <div class="g2">
   <div class="card map anim rv">
@@ -343,7 +300,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 
 <!-- 3 付け方 -->
 <section class="sec" id="s3">
- <div class="sec-h"><span class="n">03</span><h2>ピアスビスで留める手順</h2></div>
+ <div class="sec-h"><span class="n">02</span><h2>ピアスビスで留める手順</h2></div>
  <p class="msg">強さを決めるのは<b>「カバーがしっかりしているか」</b>と<b>「留める所の数（4か所）と締めすぎないこと」</b>。そして万一のための<b>ワイヤー</b>です。</p>
  <div class="g2">
   <div class="card map anim rv">
@@ -397,9 +354,80 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
  <div class="ng">やってはいけないこと：コンセントを増やす・ライトやカメラを電気の線に直接つなぐ（直結）のは、<b>電気工事士の資格が必要</b>です。DIYは「コンセントに挿すまで」。</div>
 </section>
 
+<!-- 見積り -->
+<section class="sec" id="est">
+ <div class="sec-h"><span class="n">03</span><h2>費用（見積り）</h2></div>
+ <p class="msg">全部で<b>約1.3〜2.2万円</b>。<b>月々の支払いはありません。</b>取り付けは家族で行うので、工事代も0円です。</p>
+ <div class="g2">
+  <div class="card rv">
+   <p class="ct">何にいくらかかるか</p><p class="cs">濃い色＝安く買えたとき、薄い色＝高めのとき</p>
+   <div class="rng"><div class="lb">カメラ本体<small class="num">8,000〜11,000円</small></div><div class="track"><div class="bar" style="left:0;width:91.7%"></div><div class="bar hi" style="left:0;width:66.7%"></div></div><div class="lb">マイクロSD<small class="num">2,000〜3,000円</small></div><div class="track"><div class="bar" style="left:0;width:25.0%"></div><div class="bar hi" style="left:0;width:16.7%"></div></div><div class="lb">電源・コード<small class="num">1,800〜4,000円</small></div><div class="track"><div class="bar" style="left:0;width:33.3%"></div><div class="bar hi" style="left:0;width:15.0%"></div></div><div class="lb">取り付け材料<small class="num">1,100〜2,500円</small></div><div class="track"><div class="bar" style="left:0;width:20.8%"></div><div class="bar hi" style="left:0;width:9.2%"></div></div><div class="lb">プレート<small class="num">300〜1,000円</small></div><div class="track"><div class="bar" style="left:0;width:8.3%"></div><div class="bar hi" style="left:0;width:2.5%"></div></div></div>
+   <div class="axis"><span>0</span><span>4,000</span><span>8,000</span><span>12,000円</span></div>
+  </div>
+  <div class="card rv">
+   <p class="ct">まとめ</p>
+   <ul class="items">
+    <li><span>防犯カメラ（Tapo C530WS）</span><span>8,000〜11,000円</span></li>
+    <li><span>高耐久マイクロSDカード 128GB</span><span>2,000〜3,000円</span></li>
+    <li><span>電源の延長コード・コード留め・防水テープ</span><span>1,800〜4,000円</span></li>
+    <li><span>ピアスビス・すき間うめ・ワイヤー</span><span>1,100〜2,500円</span></li>
+    <li><span>「防犯カメラ作動中」のプレート</span><span>300〜1,000円</span></li>
+    <li><span>取り付け工事・道具</span><span style="color:var(--good);font-weight:700">0円</span></li>
+    <li><span><b>合計（目安）</b></span><span><b>13,200〜21,500円</b></span></li>
+   </ul>
+   <p class="src">値段は2026年11月の目安（税込）。明細・仕様・お願いしたいことは<a href="mitsumori.html" target="_blank" rel="noopener" style="color:var(--brand);font-weight:700">見積り・仕様書</a>へ。</p>
+  </div>
+ </div>
+</section>
+
+<!-- 1 決まったこと -->
+<section class="sec" id="s1">
+ <div class="sec-h"><span class="n">04</span><h2>決まったこと</h2></div>
+ <p class="msg">11月23日に現地で見て決めた内容です。<b>接着はやめて、ピアスビスで留めます。</b></p>
+ <div class="g2">
+  <div class="card rv">
+   <p class="ct">機材と付け方</p>
+   <dl class="spec" style="margin-top:8px">
+    <dt>カメラ</dt><dd>TP-Link Tapo C530WS（3K・首振り・屋外用・Wi-Fi）</dd>
+    <dt>録画</dt><dd>高耐久マイクロSDカード 128GB（例：SanDisk High Endurance）。月額なし</dd>
+    <dt>電源</dt><dd>付属のアダプター（<b>9V・0.85A</b>）＋DC延長ケーブル 5m。車庫の奥のコンセント（<b>カメラの下・物置の右</b>、よしずの裏）から</dd>
+    <dt>つなぎ方</dt><dd>Wi-Fi（カーポートの前は届かないので、家側に付ける）</dd>
+    <dt>場所</dt><dd>車庫の入口の上（車の上）、<b>燕のふんよけが付いている茶色いアルミの板の下の面</b>。道路側の端の玄関寄り。逆さに吊る</dd>
+    <dt>固定</dt><dd><b>ステンレスのピアスビス</b>で台座を<b>4か所</b>留める。下穴なし。ネジ穴のまわりはコーキング</dd>
+    <dt>落下防止</dt><dd>念のため、カメラ本体から<b>カバーの横にピアスビス1本で付けた留め具</b>へ、短いワイヤー（カーポートの枠は約1m離れていて遠い）。ネジのゆるみに備えるもの</dd>
+    <dt>工具</dt><dd><b>手持ちの電動ドライバーだけ</b>（ドリル刃は使わない）</dd>
+   </dl>
+  </div>
+  <div class="card rv">
+   <p class="ct">現地でわかったこと（11月23日）</p><p class="cs">表からネジで留める方法に決めた理由</p>
+   <ul class="where">
+    <li><span class="ic" style="background:var(--good)">✓</span><div><b>カバーは平らなアルミで、中は空洞</b>たたくとアルミの音だけ。端は閉じている。<b>裏からナットを当てられない</b>ので、表から留められるネジにする。</div></li>
+    <li><span class="ic" style="background:var(--good)">✓</span><div><b>燕のふんよけ（家を買ったときから）は、ネジでアルミに直接</b>抜いたネジは先が平らな機械ネジで、裏にナットはなかった。<b>同じ考え方で留められる</b>証拠。</div></li>
+    <li><span class="ic" style="background:var(--good)">✓</span><div><b>巻き付けはできない</b>カバーのまわりにすき間がない。</div></li>
+    <li><span class="ic" style="background:var(--bad)">×</span><div><b>接着はやめた</b>凸凹の吹付塗装に貼る方法は、年月がたつと塗装ごとはがれる心配がある。落ちる先は玄関の前。</div></li>
+   </ul>
+  </div>
+ </div>
+ <div class="card rv" style="margin-top:14px">
+  <p class="ct">ピアスビスに決めた理由と、気をつけること</p><p class="cs">知人のおすすめ。先がドリルになったネジで、下穴なしで電動ドライバーだけで留められる</p>
+  <div style="overflow-x:auto"><table class="cmp">
+   <thead><tr><th></th><th>リベットナット（別案）</th><th>ピアスビス（今回）</th></tr></thead>
+   <tbody>
+    <tr><th>下穴</th><td>要る</td><td class="g">要らない</td></tr>
+    <tr><th>工具</th><td>ナットリベッター（約3,000円）</td><td class="g">手持ちのドライバー</td></tr>
+    <tr><th>手間</th><td>多い</td><td class="g">少ない</td></tr>
+    <tr><th>年月の強さ</th><td class="g">強い。裏でつぶれて抜けない</td><td class="w">薄い板（1〜2mm）はネジ山が1〜2山しかかからず、吊り下げの向きで少しずつゆるみやすい</td></tr>
+    <tr><th>失敗しやすい所</th><td>下穴の太さを守れば少ない</td><td class="w">締めすぎると空回りして効かなくなる</td></tr>
+    <tr><th>付け外し</th><td class="g">何度でもできる</td><td class="w">くり返すと穴が広がる</td></tr>
+   </tbody>
+  </table></div>
+  <p class="src">気をつけること：<b>ステンレス製</b>を4本、電動ドライバーは<b>弱い設定で、最後は手で締める</b>。ネジ穴にコーキング、<b>落下防止ワイヤーは必ず</b>。カバーを押してたわむ・板がとても薄いときは、リベットナット（別案）を考える。</p>
+ </div>
+</section>
+
 <!-- 4 買い物 -->
 <section class="sec" id="s4">
- <div class="sec-h"><span class="n">04</span><h2>買い出しリスト</h2></div>
+ <div class="sec-h"><span class="n">05</span><h2>買い出しリスト</h2></div>
  <p class="msg"><b>赤い「確認」</b>の付いた物は、測った数字やカメラの台座と見くらべてから買います。</p>
  <div class="g2">
   <div class="card rv">
@@ -428,7 +456,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 
 <!-- 5 チェックリスト -->
 <section class="sec" id="s5">
- <div class="sec-h"><span class="n">05</span><h2>付ける日までのチェック</h2></div>
+ <div class="sec-h"><span class="n">06</span><h2>付ける日までのチェック</h2></div>
  <p class="msg">チェックとメモは<b>このスマホの中だけに残ります</b>（ほかの人には見えません）。</p>
  <div class="card rv">
   <div class="prog"><i id="pbar"></i></div>
@@ -439,7 +467,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 
 <!-- 6 設定・困ったとき -->
 <section class="sec" id="s6">
- <div class="sec-h"><span class="n">06</span><h2>アプリの設定と、困ったとき</h2></div>
+ <div class="sec-h"><span class="n">07</span><h2>アプリの設定と、困ったとき</h2></div>
  <div class="g2">
   <div class="card rv">
    <p class="ct">付けたらすぐやる設定</p>
@@ -466,7 +494,7 @@ h1{font-size:27px;line-height:1.3;margin:4px 0 8px}
 
 <!-- 7 ほかの対策 -->
 <section class="sec" id="s7">
- <div class="sec-h"><span class="n">07</span><h2>あとで足すなら・すぐできること</h2></div>
+ <div class="sec-h"><span class="n">08</span><h2>あとで足すなら・すぐできること</h2></div>
  <p class="msg">戸建てに入られる手口は<b>鍵のかけ忘れ</b>がいちばん多く、次が<b>窓ガラスを割る</b>手口です。</p>
  <div class="more">
   <div class="mo rv"><b>ガレージ奥にセンサーライト</b>駐車場のコンセントがもう1口あいていれば、コンセント式のセンサーライト（例：ムサシ LED-AC2014 約5,500円）。奥の暗がりが明るくなる。</div>
